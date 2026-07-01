@@ -130,28 +130,18 @@ html[lang="ta"] h1,html[lang="ta"] h2,html[lang="ta"] h3,html[lang="ta"] h4,html
 .trust .t i{font-size:1.5rem;color:var(--yellow)}
 @media(max-width:767px){.trust .t{justify-content:flex-start;font-size:.88rem}}
 
-/* ---------------- Categories ---------------- */
-.cat-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 16px;text-align:center;height:100%;cursor:pointer;transition:.22s;position:relative;overflow:hidden}
-.cat-card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--yellow);transform:scaleX(0);transform-origin:left;transition:.25s}
-.cat-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#d8d3c0}
-.cat-card:hover::after{transform:scaleX(1)}
-.cat-ico{width:62px;height:62px;border-radius:16px;margin:0 auto 13px;display:grid;place-items:center;font-size:1.7rem;background:var(--blue-soft);color:var(--blue)}
-.cat-card h3{font-size:1.04rem;color:var(--ink);margin:0 0 3px}
-.cat-card p{font-size:.8rem;color:var(--muted);margin:0}
-
-/* ---------------- Services ---------------- */
-.svc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;height:100%;transition:.22s;display:flex;flex-direction:column}
-.svc-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.svc-photo{position:relative;aspect-ratio:16/11;background:#fff;overflow:hidden}
-.svc-photo img{width:100%;height:100%;object-fit:cover;transition:.4s}
-.svc-card:hover .svc-photo img{transform:scale(1.06)}
-.svc-photo .svc-ico{position:absolute;left:14px;bottom:-22px;width:48px;height:48px;border-radius:13px;background:var(--blue);color:var(--yellow);display:grid;place-items:center;font-size:1.35rem;box-shadow:0 8px 16px -8px rgba(31,42,140,.9);border:2px solid #fff}
-.svc-body{padding:26px 18px 18px;flex:1;display:flex;flex-direction:column}
-.svc-body h3{font-size:1.12rem;color:var(--ink);margin:0 0 5px}
-.svc-body p{font-size:.86rem;color:var(--muted);margin:0 0 14px;flex:1}
-.svc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.svc-tags span{font-size:.72rem;font-weight:600;color:var(--blue);background:var(--blue-soft);padding:3px 9px;border-radius:999px}
-.svc-body .btn{align-self:flex-start;padding:.45rem 1rem;font-size:.86rem}
+/* ---------------- Services (compact) ---------------- */
+.svc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);padding:16px 16px 14px;height:100%;display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:#d8d3c0}
+.svc-top{display:flex;align-items:center;gap:11px}
+.svc-ico{flex:0 0 auto;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:1.2rem;background:var(--blue);color:var(--yellow)}
+.svc-card h3{font-size:.98rem;color:var(--ink);margin:0;line-height:1.25}
+.svc-tags{display:flex;flex-wrap:wrap;gap:5px}
+.svc-tags span{font-size:.68rem;font-weight:600;color:var(--blue);background:var(--blue-soft);padding:2px 8px;border-radius:999px}
+.svc-wa{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:700;color:var(--wa-2)}
+.svc-wa i{font-size:.95rem}
+.svc-wa:hover{color:var(--wa)}
+@media(max-width:575px){.svc-card h3{font-size:.9rem}.svc-ico{width:36px;height:36px;font-size:1.05rem}}
 
 /* ---------------- Toolbar ---------------- */
 .toolbar{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--shadow-sm)}
@@ -203,14 +193,6 @@ html[lang="ta"] h1,html[lang="ta"] h2,html[lang="ta"] h3,html[lang="ta"] h4,html
 .pm-qtywrap .lbl{font-size:.8rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;display:block}
 .pm-qtywrap .qty{max-width:180px}
 @media(max-width:767px){.pm-body{padding:22px}.pm-name{font-size:1.25rem}}
-
-/* ---------------- About (image-free, clean) ---------------- */
-.about-feats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.about-feat{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
-.about-feat .fi{flex:0 0 auto;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.35rem;background:var(--blue);color:var(--yellow)}
-.about-feat h4{font-size:1rem;color:var(--ink);margin:0 0 3px}
-.about-feat p{font-size:.84rem;color:var(--muted);margin:0}
-@media(max-width:575px){.about-feats{grid-template-columns:1fr}}
 
 /* ---------------- Contact ---------------- */
 .info-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 18px;text-align:center;height:100%;transition:.2s}
