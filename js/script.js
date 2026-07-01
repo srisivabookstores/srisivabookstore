@@ -49,7 +49,7 @@ const I18N = {
     cat_lead:"ஒரு வகையைத் தட்டினால் அந்தப் பொருட்களுக்குச் செல்லலாம்.",
 
     svc_eyebrow:"எங்கள் சேவைகள்", svc_title:"பிரிண்ட் & பைண்டிங் சேவைகள்",
-    svc_lead:"பிரிண்ட் அவுட், ஜெராக்ஸ், லேமினேசன், ஸ்பைரல் பைண்டிங் — அனைத்தும் ஒரே இடத்தில்.",
+    svc_lead:"பிரிண்ட், ஜெராக்ஸ், லேமினேசன், ஸ்பைரல் பைண்டிங் — ஒரே இடத்தில்.",
     svc_enquire:"இந்தச் சேவையைக் கேளுங்கள்",
 
     prod_eyebrow:"பார்த்து • கேளுங்கள்", prod_title:"எங்கள் பொருட்கள்",
@@ -114,7 +114,7 @@ const I18N = {
     cat_lead:"Tap a category to jump to those products.",
 
     svc_eyebrow:"Our services", svc_title:"Print & Binding Services",
-    svc_lead:"Print out, Xerox, lamination and spiral binding — all in one place.",
+    svc_lead:"Print, Xerox, lamination & spiral binding — all in one place.",
     svc_enquire:"Ask about this service",
 
     prod_eyebrow:"Browse • enquire", prod_title:"Our Products",
@@ -308,33 +308,17 @@ function afterCartChange(id){
   syncCartUI();
 }
 
-/* ---------- Render: categories ---------- */
-function renderCategories(){
-  $("#categoryGrid").innerHTML = CATEGORIES.map(c=>`
-    <div class="col-6 col-md-4 col-lg-3">
-      <div class="cat-card reveal" data-cat="${c.key}" role="button" tabindex="0">
-        <div class="cat-ico"><i class="bi ${c.icon}"></i></div>
-        <h3>${c[LANG].n}</h3>
-        <p>${c[LANG].b}</p>
-      </div>
-    </div>`).join("");
-}
-
-/* ---------- Render: services ---------- */
+/* ---------- Render: services (compact) ---------- */
 function renderServices(){
   $("#servicesGrid").innerHTML = SERVICES.map(s=>`
-    <div class="col-sm-6 col-lg-3">
+    <div class="col-6 col-lg-3">
       <div class="svc-card reveal">
-        <div class="svc-photo">
-          <img src="images/products/${s.img}.jpg" alt="${s[LANG].n}" loading="lazy">
-          <div class="svc-ico"><i class="bi ${s.icon}"></i></div>
-        </div>
-        <div class="svc-body">
+        <div class="svc-top">
+          <span class="svc-ico"><i class="bi ${s.icon}"></i></span>
           <h3>${s[LANG].n}</h3>
-          <p>${s[LANG].d}</p>
-          <div class="svc-tags">${(LANG==="ta"?s.ta_tags:s.en_tags).map(x=>`<span>${x}</span>`).join("")}</div>
-          <a class="btn btn-wa" href="${waService(s)}" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-1"></i>${t("svc_enquire")}</a>
         </div>
+        <div class="svc-tags">${(LANG==="ta"?s.ta_tags:s.en_tags).map(x=>`<span>${x}</span>`).join("")}</div>
+        <a class="svc-wa" href="${waService(s)}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>${t("wa")}</a>
       </div>
     </div>`).join("");
 }
@@ -456,7 +440,7 @@ function setLanguage(l){
   try{ localStorage.setItem("ssbs_lang", l); }catch(e){}
   $("#langMenu").classList.remove("open");
   applyI18n();
-  renderCategories(); renderServices(); renderPills(); renderProducts();
+  renderServices(); renderPills(); renderProducts();
   syncCartUI();
 }
 
@@ -494,7 +478,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   $("#mapDir").href = MAP.directions;
 
   applyI18n();
-  renderCategories(); renderServices(); renderPills(); renderProducts();
+  renderServices(); renderPills(); renderProducts();
   syncCartUI(); initScrollSpy(); observeReveal();
 
   // delegated clicks
