@@ -1,55 +1,54 @@
-# Sri Siva Book Store — Single-Page Website
+# ஸ்ரீ சிவா புத்தக நிலையம் — Sri Siva Book Store
 
-A one-page, fully responsive catalog built with **HTML5, CSS3, Bootstrap 5 and
-vanilla JavaScript** only. No frameworks, no backend, no database, no cart or
-payments. The whole site lives in `index.html`; the menu scrolls to sections on
-the same page, and each product opens in a **Bootstrap modal** — no page changes.
+Single-page, Tamil-first (English toggle) website. HTML5 + Bootstrap 5 (CDN) +
+vanilla JS. No backend. Host anywhere static (GitHub Pages, Netlify, any host).
 
-## Files
-```
-/
-├── index.html        the entire website
-├── css/style.css     all styles
-├── js/script.js      product data + all interactivity
-└── images/
-    └── products/     <-- put your REAL product photos here
-```
+## What's in this build
+- **122 products total** = 52 with real photos + 70 APSARA/Nataraj catalogue items.
+- Category hierarchy filters: Writing Instruments, Art & Colours, Paper & Notebooks,
+  Files & Filing, Fasteners & Adhesives, Cutting & Measuring, Kits & Bags,
+  Fancy & Party, Toys & Games, Project Items, Other — plus **Popular** and search.
+- **Load more** pagination (24 at a time) so the page stays short.
+- Cart + "Enquire on WhatsApp", product modal, Brands (dynamic/expandable), Services.
 
-## IMPORTANT: this site uses your real product photos
-There are **no illustrations or placeholders pretending to be products**. Each
-product expects a real photo file. Until you add one, that product shows a plain
-"Add product photo" slot so you can see exactly what's missing.
+## Product types in the data (js/script.js → PRODUCTS)
+Three helpers:
+- `P(id,cat,brand,"file",{ta},{en},featured)` — product with a real photo at `images/products/file.jpg`.
+- `Z(id,cat,brand,"file","Tamil","English",featured)` — same, shorthand for the ZIP photos.
+- `A(id,cat,brand,"#color","Name","MRP")` — **catalogue tile** (no photo yet): shows a
+  branded tile with the name + `MRP ₹…`. To give it a real photo later, save
+  `images/products/x.jpg` and change `A(...)` to `Z(id,cat,brand,"x","…","…")`.
 
-### How to add your photos
-1. Take/collect a photo of each product (square works best, ~800–1200px).
-2. Save it into `images/products/` using the **exact file name** listed for that
-   product in `js/script.js` (the `img` field), e.g. `pens.jpg`, `notebook.jpg`,
-   `school-bag.jpg`, `balloons.jpg`, and so on.
-3. Refresh the page — the photo appears immediately, in the grid, the gallery and
-   the popup. No code change needed.
+## APSARA / Nataraj catalogue (70 items)
+Auto-extracted from APSARA-PRODUCT-CATALOGUE_2024.pdf (names + category + MRP).
+Shown as branded tiles until you add photos. **Please review** — a few names may be
+slightly off and the MRP is the catalogue's **box/pack** price (e.g. ₹1000 = box of
+100), not a single-item price. Edit names/prices in the `A(...)` lines, or tell me
+your selling prices and I'll update them.
 
-If you prefer different file names or formats (`.webp`, `.png`), just update the
-`img` value for that product in `js/script.js` to match.
+## ZIP photos (22 items)
+Added with real photos (`zip01.jpg`…`zip22.jpg`). Names read via OCR where the photo
+had printed text (Fountain Pen, Hi-Dark Leads, Ink Cartridges, Folders/Files, Clay sets,
+Balloon Pump, 9V Battery Clip Kit, Project Pump Kit, Glitter Kit…). A few could not be
+read and use **provisional names** to confirm/rename (ids 200,201,204,205,218–221):
+Assorted Stationery, Student Pen, Gel Pen, Beaded Bracelets. Rename in their `Z(...)` lines.
 
-## Editing products
-All products are defined once, in the `PRODUCTS` array in `js/script.js`. Copy an
-entry and change the fields:
+## NOT included yet: DOMS catalogue
+doms-catalogue_copy.pdf is an **image-only PDF** (106 scanned pages, no text). It needs
+OCR/vision to read, which needs a working image viewer (mine failed this session).
+Send a DOMS product/price list as text/Excel, or ask me to OCR it next turn.
+
+## Add a product (quick)
+Add one line to `PRODUCTS` in `js/script.js`:
 ```js
-{ id:32, name:"New Item", category:"stationery", price:99,
-  desc:"Short description shown in the popup.", img:"images/products/new-item.jpg" }
+Z(400,"writing","DOMS","my-photo","தமிழ் பெயர்","English name", true),
 ```
-`category` is one of: `stationery`, `school`, `art`, `educational`, `toys`, `party`.
+Save a square photo at `images/products/my-photo.jpg`. Categories: writing, art, paper,
+filing, fasteners, cutting, kits, fancy, toys, project, other.
 
-## WhatsApp number
-Set once in the `STORE` object at the top of `js/script.js` (`phone` = country
-code, no `+` or spaces, e.g. `919150620572`). Update the `tel:` links in the HTML
-if the number changes.
+## Google Maps
+Edit the `MAP` object at the top of `js/script.js` with your exact share link.
 
-## Google Map
-In the Contact section of `index.html`, replace the `.map-placeholder` block with
-your Google Maps embed (Maps → Share → "Embed a map" → paste the `<iframe>` with
-`class="map-frame"`).
-
-## Run / deploy
-Open `index.html` in a browser, or upload the folder to any static host
-(GitHub Pages, Netlify, Hostinger, cPanel). No build step.
+## Prices
+Real-photo products show "Ask on WhatsApp"; catalogue items show MRP. Change the price
+model any time — tell me your own selling prices and I'll switch the display.
