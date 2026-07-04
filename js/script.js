@@ -25,7 +25,7 @@ const I18N = {
     nav_services:"சேவைகள்", nav_products:"பொருட்கள்", nav_about:"எங்களைப் பற்றி", nav_contact:"தொடர்பு",
     hero_loc:"ஊத்தங்கரை • தமிழ்நாடு",
     hero_title:'ஸ்ரீ சிவா <span class="u">புத்தக நிலையம்</span>',
-    hero_tag:"ஸ்டேஷனரி | ஜெராக்ஸ் | பிரிண்ட் அவுட் | லேமினேஷன் | ஸ்பைரல் பைண்டிங் | பர்த்டே & கிஃப்ட் ஐட்டம்ஸ்",
+    hero_tag:"ஸ்டேஷனரி | ஜெராக்ஸ் | பிரிண்ட் அவுட் | லேமினேஷன் | ஸ்பைரல் பைண்டிங் | பர்த்டே & கிஃப்ட் ஐட்டம்ஸ் | ஃபேன்சி ஐட்டம்ஸ்",
     hero_view:"பொருட்களை பார்க்கவும்", hero_contact:"தொடர்பு கொள்ளவும்", hero_dir:"வழிகாட்டுதலை பெறவும்",
 
     cat_eye:"நாங்கள் வைத்திருப்பவை", cat_title:"பொருள் வகைகள்",
@@ -81,7 +81,7 @@ const I18N = {
     nav_services:"Services", nav_products:"Products", nav_about:"About", nav_contact:"Contact",
     hero_loc:"Uthangarai • Tamil Nadu",
     hero_title:'Sri Siva <span class="u">Book Store</span>',
-    hero_tag:"Stationery | Xerox | Print Out | Lamination | Spiral Binding | Birthday & Gift Items",
+    hero_tag:"Stationery | Xerox | Print Out | Lamination | Spiral Binding | Birthday & Gift Items | Fancy Items",
     hero_view:"View Products", hero_contact:"Contact Us", hero_dir:"Get Directions",
 
     cat_eye:"What we stock", cat_title:"Product Categories",
