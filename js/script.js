@@ -20,7 +20,7 @@ const MAP = {
 /* ---------------- i18n ---------------- */
 const I18N = {
   ta:{
-    brand_name:"ஸ்ரீ சிவா புத்தக நிலையம்", brand_sub:"ஊத்தங்கரை, தமிழ்நாடு",
+    brand_name:"ஸ்ரீ சிவா புத்தக நிலையம்", brand_sub:"ஊத்தங்கரை, தமிழ்நாடு", brand_mark:"S",
     nav_home:"முகப்பு", nav_categories:"வகைகள்", nav_brands:"பிராண்டுகள்",
     nav_services:"சேவைகள்", nav_products:"பொருட்கள்", nav_about:"எங்களைப் பற்றி", nav_contact:"தொடர்பு",
     hero_loc:"ஊத்தங்கரை • தமிழ்நாடு",
@@ -30,10 +30,10 @@ const I18N = {
 
     cat_eye:"நாங்கள் வைத்திருப்பவை", cat_title:"பொருள் வகைகள்",
     cat_lead:"ஒரு வகையைத் தட்டி அந்தப் பொருட்களைப் பார்க்கவும். மேலும் பல பொருட்கள் கடையில் கிடைக்கும்.",
-    cat_more:"மேலும்",
+    cat_more:"மேலும்", cat_browse:"பார்க்கவும்", browse_hint:"வகைகள் வழியாக பொருட்களைப் பாருங்கள் — அல்லது மேலே தேடுங்கள்.", browse_cta:"வகைகளைப் பார்க்கவும்",
 
-    brand_eye:"நம்பகமான பிராண்டுகள்", brand_title:"நாங்கள் விற்கும் பிராண்டுகள்",
-    brand_lead:"அங்கீகரிக்கப்பட்ட டீலர்களிடமிருந்து மட்டுமே தரமான பொருட்களை வாங்குகிறோம்.",
+    brand_eye:"நம்பகமான பிராண்டுகள்", brand_title:"எங்கள் பிராண்டுகள்",
+    brand_lead:"நாங்கள் வழங்கும் நம்பகமான பிராண்டுகள்.",
     brand_note:"* பிராண்ட் பெயர்கள் மற்றும் லோகோக்கள் அந்தந்த நிறுவனங்களுக்கு சொந்தமானவை.",
     brand_more:"இன்னும் பல பிராண்டுகள் கடையில் கிடைக்கும்",
 
@@ -61,10 +61,10 @@ const I18N = {
 
     contact_eye:"தொடர்பு கொள்ள", contact_title:"எங்களைத் தொடர்பு கொள்ளுங்கள்",
     contact_lead:"விலை மற்றும் இருப்பு அறிய அழைக்கவும் அல்லது வாட்ஸ்அப் செய்யவும்.",
-    c_loc:"இடம்", c_loc_val:"ஊத்தங்கரை, தமிழ்நாடு", c_phone:"தொலைபேசி", c_wa:"வாட்ஸ்அப்",
+    c_loc:"இடம்", c_loc_val:"ஊத்தங்கரை, தமிழ்நாடு", c_phone:"தொலைபேசி", c_wa:"வாட்ஸ்அப்", c_phonewa:"தொலைபேசி / வாட்ஸ்அப்",
     map_dir:"வழிகாட்டுதல் பெறவும்", map_open:"கூகுள் மேப்ஸில் திறக்கவும்",
     cta_title:"உடனடி விசாரணை", cta_p:"தேவையான பொருளை வாட்ஸ்அப்பில் அனுப்புங்கள் — விலை & இருப்பு உடனே தெரிவிக்கிறோம்.",
-    wa:"வாட்ஸ்அப்", call_store:"கடைக்கு அழைக்கவும்",
+    wa:"வாட்ஸ்அப்", call_store:"அழைக்கவும்",
 
     foot_tag:"தரமான ஸ்டேஷனரி, ஃபேன்சி பொருட்கள் & பிரிண்டிங் சேவைகள்.",
     foot_tag2:"ஊத்தங்கரைக்கு நம்பகமான பொருட்களுடன் சேவை.",
@@ -76,7 +76,7 @@ const I18N = {
     toast_added:"கார்ட்டில் சேர்க்கப்பட்டது",
   },
   en:{
-    brand_name:"Sri Siva Book Store", brand_sub:"Uthangarai, Tamil Nadu",
+    brand_name:"Sri Siva Book Store", brand_sub:"Uthangarai, Tamil Nadu", brand_mark:"S",
     nav_home:"Home", nav_categories:"Categories", nav_brands:"Brands",
     nav_services:"Services", nav_products:"Products", nav_about:"About", nav_contact:"Contact",
     hero_loc:"Uthangarai • Tamil Nadu",
@@ -86,10 +86,10 @@ const I18N = {
 
     cat_eye:"What we stock", cat_title:"Product Categories",
     cat_lead:"Tap a category to view those products. Many more items are available in store.",
-    cat_more:"more",
+    cat_more:"more", cat_browse:"Browse", browse_hint:"Browse products by category above — or search at the top.", browse_cta:"Browse categories",
 
-    brand_eye:"Trusted brands", brand_title:"Brands We Sell",
-    brand_lead:"We buy quality products only from authorised dealers.",
+    brand_eye:"Trusted brands", brand_title:"Our Brands",
+    brand_lead:"Trusted brands we offer.",
     brand_note:"* Brand names and logos belong to their respective companies.",
     brand_more:"& many more brands in store",
 
@@ -117,10 +117,10 @@ const I18N = {
 
     contact_eye:"Get in touch", contact_title:"Contact Us",
     contact_lead:"Call or WhatsApp us for price and availability.",
-    c_loc:"Location", c_loc_val:"Uthangarai, Tamil Nadu", c_phone:"Phone", c_wa:"WhatsApp",
+    c_loc:"Location", c_loc_val:"Uthangarai, Tamil Nadu", c_phone:"Phone", c_wa:"WhatsApp", c_phonewa:"Phone / WhatsApp",
     map_dir:"Get Directions", map_open:"Open in Google Maps",
     cta_title:"Quick enquiry", cta_p:"Message the item you need on WhatsApp — we'll reply with price and stock right away.",
-    wa:"WhatsApp", call_store:"Call the store",
+    wa:"WhatsApp", call_store:"Call",
 
     foot_tag:"Quality Stationery, Fancy Items & Printing Services.",
     foot_tag2:"Serving Uthangarai with trusted products.",
@@ -147,6 +147,7 @@ const BRANDS = [
   { word:"Faber-Castell", color:"#0a7d3b", logo:"", ta:"கலர் பென்சில், கிரேயான்ஸ், மார்க்கர் & ஓவியப் பொருட்கள்.", en:"Colour pencils, crayons, markers and art supplies." },
   { word:"Camlin",        color:"#e67e22", logo:"", ta:"கலர்ஸ், ஜியோமெட்ரி, ஸ்டேஷனரி & ஓவியப் பொருட்கள்.", en:"Colours, geometry, stationery and art materials." },
   { word:"Cello",         color:"#c0392b", logo:"", ta:"பால் பேனா, ஜெல் பேனா & எழுதும் பொருட்கள்.", en:"Ball pens, gel pens and writing instruments." },
+  { word:"Flair",         color:"#e4002b", logo:"", ta:"பால் பேனா, ஜெல் பேனா & ஃபவுண்டன் பேனா.", en:"Ball pens, gel pens and fountain pens." },
   { word:"Reynolds",      color:"#2c3e9e", logo:"", ta:"பால் பேனா, ஜெல் பேனா — நம்பகமான எழுதுகோல்.", en:"Ball pens and gel pens — trusted writing." },
   { word:"Classmate",     color:"#0f9d58", logo:"", ta:"நோட்டுப் புத்தகங்கள், பேனா & பென்சில்.", en:"Notebooks, pens and pencils." },
 ];
@@ -203,14 +204,12 @@ const FILTER_LABEL = Object.fromEntries(FILTERS.map(f=>[f.key,f]));
 
 /* ---------------- Services ---------------- */
 const SERVICES = [
-  { icon:"bi-printer-fill",  ta:{n:"பிரிண்ட் அவுட்"},  en:{n:"Print Out"},        ta_tags:["B&W","A4"],        en_tags:["B&W","A4"] },
-  { icon:"bi-files",         ta:{n:"ஜெராக்ஸ்"},        en:{n:"Xerox"},            ta_tags:["காப்பி","பல்க்"], en_tags:["Copy","Bulk"] },
-  { icon:"bi-card-image",    ta:{n:"லேமினேஷன்"},       en:{n:"Lamination"},       ta_tags:["A3","A4","ID"],   en_tags:["A3","A4","ID"] },
-  { icon:"bi-journal-bookmark-fill", ta:{n:"ஸ்பைரல் பைண்டிங்"}, en:{n:"Spiral Binding"}, ta_tags:["A4","லீகல்"], en_tags:["A4","Legal"] },
-  { icon:"bi-palette-fill",  ta:{n:"கலர் பிரிண்டிங்"},  en:{n:"Colour Printing"},  ta_tags:["A4","ஃபோட்டோ"],   en_tags:["A4","Photo"] },
-  { icon:"bi-sticky-fill",   ta:{n:"ஸ்டிக்கர் பிரிண்டிங்"}, en:{n:"Sticker Printing"}, ta_tags:["லேபிள்"],     en_tags:["Label"] },
-  { icon:"bi-file-earmark",  ta:{n:"A3 பிரிண்டிங்"},    en:{n:"A3 Printing"},      ta_tags:["A3"],            en_tags:["A3"] },
-  { icon:"bi-file-earmark-text", ta:{n:"A4 பிரிண்டிங்"}, en:{n:"A4 Printing"},     ta_tags:["A4"],            en_tags:["A4"] },
+  { icon:"bi-printer-fill",  ta:{n:"பிரிண்ட் அவுட் / ஜெராக்ஸ்"}, en:{n:"Printout / Xerox"}, ta_tags:["A3","A4","B&W","கலர்"], en_tags:["A3","A4","B&W","Colour"] },
+  { icon:"bi-palette-fill",  ta:{n:"கலர் பிரிண்டிங்"},  en:{n:"Colour Printing"},  ta_tags:["A3","A4","ஃபோட்டோ","சர்டிபிகேட்"], en_tags:["A3","A4","Photo","Certificate"] },
+  { icon:"bi-card-image",    ta:{n:"லேமினேஷன்"},       en:{n:"Lamination"},       ta_tags:["A3","A4","கவர்ன்மென்ட் ID"],   en_tags:["A3","A4","Government ID"] },
+  { icon:"bi-journal-bookmark-fill", ta:{n:"ஸ்பைரல் பைண்டிங்"}, en:{n:"Spiral Binding"}, ta_tags:["A3","A4","லீகல்"], en_tags:["A3","A4","Legal"] },
+  { icon:"bi-sticky-fill",   ta:{n:"ஸ்டிக்கர் பிரிண்டிங்"}, en:{n:"Sticker Printing"}, ta_tags:["A3","A4","லேபிள்"],     en_tags:["A3","A4","Label"] },
+  { icon:"bi-patch-check-fill", ta:{n:"சான்றிதழ்கள்"}, en:{n:"Certificates"}, ta_tags:["மெடிக்கல்","ஃபிட்னஸ்","ரிட்டர்ன் டு டியூட்டி","இதர"], en_tags:["Medical","Fitness","Return to Duty","Others"] },
 ];
 
 /* ---------------- Products (real photos only) ---------------- */
@@ -409,22 +408,23 @@ function afterCart(id){
 
 /* ---------- renders ---------- */
 function renderCategories(){
-  $("#categoryGrid").innerHTML = CATEGORIES.map(c=>{
-    const items=c[LANG].items, show=items.slice(0,5), extra=items.length-show.length;
-    return `<div class="cat-tile reveal" data-filter="${c.filter}" role="button" tabindex="0">
-      <div class="ic"><i class="bi ${c.icon}"></i></div>
-      <h3>${c[LANG].n}</h3>
-      <div class="sub">${show.map(x=>`<span>${x}</span>`).join("")}${extra>0?`<span class="more">+${extra} ${t("cat_more")}</span>`:""}</div>
+  $("#categoryGrid").innerHTML = MASTER.map(m=>{
+    const kids=(m.nodes||[]).map(n=>LANG==="ta"?n.ta:n.en).slice(0,4);
+    return `<div class="cat-tile reveal cat-tree" data-mcat="${m.key}" role="button" tabindex="0" style="--bc:${m.color}">
+      <div class="ic" style="background:${m.color}14;color:${m.color}"><i class="bi ${m.icon}"></i></div>
+      <h3>${LANG==="ta"?m.ta:m.en}</h3>
+      <div class="sub">${kids.map(x=>`<span>${x}</span>`).join("")}</div>
+      <span class="cat-open"><i class="bi bi-arrow-right-circle-fill"></i> ${t("cat_browse")}</span>
     </div>`; }).join("");
 }
 function renderBrands(){
   const cards = BRANDS.map(b=>{
     const mark = b.logo
       ? `<img src="${b.logo}" alt="${b.word}">`
-      : `<span class="brand-word" style="color:${b.color};border-color:${b.color}55;background:${b.color}12">${b.word}</span>`;
-    return `<div class="brand-card reveal"><div class="brand-logo">${mark}</div><p>${b[LANG]}</p></div>`;
+      : `<span class="brand-word" style="color:${b.color};background:${b.color}12">${b.word}</span>`;
+    return `<div class="brand-chip reveal" title="${b.word}">${mark}</div>`;
   }).join("");
-  const more = `<div class="brand-card brand-more reveal"><div class="brand-logo"><span class="brand-word-more">+</span></div><p>${t("brand_more")}</p></div>`;
+  const more = `<div class="brand-chip brand-more reveal"><span class="bm">+</span><span class="mt">${t("brand_more")}</span></div>`;
   $("#brandGrid").innerHTML = cards + more;
 }
 function renderServices(){
@@ -444,8 +444,8 @@ function cardHTML(p){
        </div>`
     : `<div class="p-thumb" data-open="${p.id}" role="button" tabindex="0" aria-label="${pName(p)}">
          <span class="p-brand">${p.brand}</span>${p.featured?`<span class="p-fav"><i class="bi bi-star-fill"></i></span>`:""}
-         <span class="p-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
-         <img src="${p.img}" alt="${pName(p)}" loading="lazy">
+         <img src="${p.img}" alt="${pName(p)}" loading="lazy" draggable="false" oncontextmenu="return false">
+         <span class="p-shield" aria-hidden="true"></span>
        </div>`;
   return `<div class="col-6 col-md-4 col-lg-3">
     <article class="p-card reveal">
@@ -457,7 +457,7 @@ function cardHTML(p){
       </div>
     </article></div>`;
 }
-function renderPills(){
+function renderPills(){ const _pillsEl=$("#filterPills"); if(_pillsEl) _pillsEl.style.display="none"; return;
   const pills=[
     `<button class="pill ${activeFilter==='all'?'active':''}" data-f="all">${t("filter_all")}</button>`,
     `<button class="pill ${activeFilter==='popular'?'active':''}" data-f="popular"><i class="bi bi-star-fill me-1"></i>${t("filter_popular")}</button>`
@@ -465,7 +465,13 @@ function renderPills(){
   $("#filterPills").innerHTML = pills.join("");
 }
 function renderProducts(){
+  if(!searchTerm){
+    $("#productsGrid").innerHTML = "";
+    $("#resultCount").textContent=""; const more=$("#loadMore"); if(more) more.style.display="none";
+    return;
+  }
   const list=PRODUCTS.filter(p=>{
+    if(p.hidden) return false;
     const okCat=activeFilter==="all"||(activeFilter==="popular"?p.featured:p.cat===activeFilter);
     const hay=(p.ta.n+" "+p.en.n+" "+p.ta.d+" "+p.en.d+" "+p.brand+" "+filterName(p.cat)).toLowerCase();
     return okCat && (!searchTerm||hay.includes(searchTerm.toLowerCase()));
@@ -532,7 +538,7 @@ function applyI18n(){
   $$(".lang-menu button").forEach(b=>b.classList.toggle("sel",b.dataset.lang===LANG));
 }
 function setLanguage(l){ LANG=l; try{localStorage.setItem("ssbs_lang",l);}catch(e){} $("#langMenu").classList.remove("open");
-  applyI18n(); renderCategories(); renderBrands(); renderServices(); renderPills(); renderProducts(); syncCart(); }
+  applyI18n(); renderCategories(); renderBrands(); renderServices(); renderPills(); renderProducts(); syncCart(); if(mRoot && $("#catPage").classList.contains("open")) renderMaster(); }
 
 /* ---------- reveal ---------- */
 let revObs;
@@ -560,7 +566,13 @@ document.addEventListener("DOMContentLoaded",()=>{
     const inc=e.target.closest("[data-inc]"); if(inc){ e.stopPropagation(); incQty(inc.dataset.inc); return; }
     const dec=e.target.closest("[data-dec]"); if(dec){ e.stopPropagation(); decQty(dec.dataset.dec); return; }
     const rm=e.target.closest("[data-rm]"); if(rm){ e.stopPropagation(); removeRow(rm.dataset.rm); return; }
+    const mnode=e.target.closest("[data-mnode]"); if(mnode){ mPath.push(Number(mnode.dataset.mnode)); renderMaster(); $("#catPage").scrollTop=0; return; }
+    const mcb=e.target.closest(".cb[data-mdepth]"); if(mcb){ mGoto(Number(mcb.dataset.mdepth)); return; }
+    const mcat=e.target.closest("[data-mcat]"); if(mcat){ openCat(mcat.dataset.mcat); return; }
     const open=e.target.closest("[data-open]"); if(open){ openProduct(open.dataset.open); return; }
+    const cnode=e.target.closest("[data-cnode]"); if(cnode){ treePath.push(Number(cnode.dataset.cnode)); renderCatPage(); $("#catPage").scrollTop=0; return; }
+    const cb=e.target.closest(".cb"); if(cb){ treeGoto(Number(cb.dataset.depth)); return; }
+    const tr=e.target.closest("[data-tree]"); if(tr){ openTree(tr.dataset.tree); return; }
     const tile=e.target.closest("[data-filter]"); if(tile){ activeFilter=tile.dataset.filter; shown=PAGE; renderPills(); renderProducts(); $("#products").scrollIntoView({behavior:"smooth"}); return; }
     const pill=e.target.closest(".pill"); if(pill){ activeFilter=pill.dataset.f; shown=PAGE; renderPills(); renderProducts(); return; }
   });
@@ -574,6 +586,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   $("#navCart").addEventListener("click",()=>toggleCart(true));
   $("#cartClose").addEventListener("click",()=>toggleCart(false));
+  { const cc=$("#catClose"); if(cc) cc.addEventListener("click",closeTree); const co=$("#catPageOverlay"); if(co) co.addEventListener("click",closeTree); }
   $("#cartOverlay").addEventListener("click",()=>toggleCart(false));
   $("#cartClear").addEventListener("click",clearCart);
   { const lm=$("#loadMore"); if(lm) lm.addEventListener("click",()=>{ shown+=PAGE; renderProducts(); }); }
@@ -585,3 +598,215 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   $$("#nav .nav-link").forEach(l=>l.addEventListener("click",()=>{ const c=$("#nav"); if(c.classList.contains("show")) new bootstrap.Collapse(c).hide(); }));
 });
+
+/* ============================================================================
+   Nested category drill-down (Pens, Pencils, Sketch, Erasers, Sharpeners)
+   ========================================================================== */
+const CATTREE = {
+  pens:{ icon:"bi-pen-fill", ta:"பேனாக்கள்", en:"Pens", cat:"writing", nodes:[
+    { ta:"பால் பாயிண்ட் பேனா", en:"Ball Point Pen", brand:"Assorted", color:"#1f3fb0", nodes:[
+      {ta:"நீலம்", en:"Ball Point Pen — Blue",  brand:"Assorted", color:"#1f5fd0"},
+      {ta:"கருப்பு", en:"Ball Point Pen — Black", brand:"Assorted", color:"#23252e"},
+      {ta:"சிவப்பு", en:"Ball Point Pen — Red",  brand:"Assorted", color:"#e23b3b"},
+      {ta:"இளஞ்சிவப்பு", en:"Ball Point Pen — Pink", brand:"Assorted", color:"#e84393"},
+      {ta:"பச்சை", en:"Ball Point Pen — Green", brand:"Assorted", color:"#1da851"},
+    ]},
+    { ta:"இங்க் பேனா", en:"Ink Pen", brand:"Assorted", color:"#17318c", nodes:[
+      {ta:"கார்ட்ரிட்ஜ்", en:"Ink Pen — Cartridges", brand:"Assorted", color:"#2c3e50"},
+      {ta:"ஹீரோ", en:"Ink Pen — Hero", brand:"Hero", color:"#c0392b"},
+      {ta:"கேம்லின்", en:"Ink Pen — Camlin", brand:"Camlin", color:"#e67e22"},
+      {ta:"ஃபிகோ", en:"Ink Pen — Figo", brand:"Figo", color:"#16a085"},
+      {ta:"ஃபிளேர்", en:"Ink Pen — Flair", brand:"Flair", color:"#e4002b"},
+    ]},
+    {ta:"ஸ்டிக் பேனா (அனைத்து வண்ணங்கள்)", en:"Stick Pen (All Colours)", brand:"Assorted", color:"#2b52d8"},
+    {ta:"இங்க் பாட்டில்", en:"Ink Bottles", brand:"Assorted", color:"#2c3e50"},
+    {ta:"ஃபேன்சி பேனா", en:"Fancy Pens", brand:"Assorted", color:"#8e44ad"},
+    {ta:"ஸ்டிக் பேனாக்கள்", en:"Stick Pens", brand:"Assorted", color:"#1f6fd0"},
+    {ta:"CD மார்க்கர்", en:"CD Marker", brand:"Assorted", color:"#111827"},
+    {ta:"பெர்மனன்ட் மார்க்கர்", en:"Permanent Marker", brand:"Assorted", color:"#7f1d1d"},
+    {ta:"வொயிட்போர்டு மார்க்கர்", en:"Whiteboard Marker", brand:"Assorted", color:"#1d4ed8"},
+  ]},
+  pencils:{ icon:"bi-pencil-fill", ta:"பென்சில்கள்", en:"Pencils", cat:"writing", nodes:[
+    {ta:"HB / அப்சரா", en:"HB / Apsara", brand:"Apsara", color:"#1f3fb0"},
+    {ta:"டாம்ஸ்", en:"Doms", brand:"DOMS", color:"#e8462b"},
+    {ta:"நடராஜ்", en:"Nataraj", brand:"Nataraj", color:"#0e8a5f"},
+    {ta:"ஃபேன்சி பென்சில்", en:"Fancy Pencils", brand:"Assorted", color:"#8e44ad"},
+    {ta:"2.0 மிமீ பென்சில்", en:"2.0 mm Pencils", brand:"Assorted", color:"#34495e"},
+    { ta:"டிப் பென்சில்", en:"Tip Pencils", brand:"Assorted", color:"#16a085", nodes:[
+      {ta:"0.5 மிமீ", en:"Pencil Tip — 0.5 mm", brand:"Assorted", color:"#2c3e9e"},
+      {ta:"0.7 மிமீ", en:"Pencil Tip — 0.7 mm", brand:"Assorted", color:"#c0392b"},
+      {ta:"2.0 மிமீ", en:"Pencil Tip — 2.0 mm", brand:"Assorted", color:"#34495e"},
+    ]},
+  ]},
+  sketch:{ icon:"bi-brush-fill", ta:"ஸ்கெட்ச்", en:"Sketch", cat:"art", nodes:[
+    {ta:"அப்சரா ஸ்கெட்ச்", en:"Apsara Sketch Pens", brand:"Apsara", color:"#1f3fb0"},
+    {ta:"டாம்ஸ் ஸ்கெட்ச்", en:"Doms Sketch Pens", brand:"DOMS", color:"#e8462b"},
+    {ta:"12 கலர் ஸ்கெட்ச்", en:"Sketch Pens — 12 Colours", brand:"Assorted", color:"#f6b301"},
+    {ta:"24 கலர் ஸ்கெட்ச்", en:"Sketch Pens — 24 Colours", brand:"Assorted", color:"#8e44ad"},
+  ]},
+  erasers:{ icon:"bi-eraser-fill", ta:"அழிப்பான்கள்", en:"Erasers", cat:"cutting", nodes:[
+    {ta:"டஸ்ட் ஃப்ரீ", en:"Dust Free", brand:"Assorted", color:"#34495e"},
+    {ta:"அப்சரா", en:"Apsara", brand:"Apsara", color:"#1f3fb0"},
+    {ta:"டாம்ஸ்", en:"Doms", brand:"DOMS", color:"#e8462b"},
+  ]},
+  sharpeners:{ icon:"bi-triangle-fill", ta:"ஷார்ப்பனர்கள்", en:"Sharpeners", cat:"cutting", nodes:[
+    {ta:"அப்சரா", en:"Apsara", brand:"Apsara", color:"#1f3fb0"},
+    {ta:"டாம்ஸ்", en:"Doms", brand:"DOMS", color:"#e8462b"},
+  ]},
+};
+
+/* Turn every leaf into a real (hidden) product so cart + modal work. */
+(function buildTree(){
+  let id=500;
+  const walk=(node,parentCat)=>{
+    (node.nodes||[]).forEach(ch=>{
+      ch._cat = node.cat || parentCat;
+      if(ch.nodes){ walk(ch, ch._cat); }
+      else {
+        ch._id = id++;
+        PRODUCTS.push({ id:ch._id, cat:ch._cat, brand:ch.brand||"Assorted",
+          img:(ch.img?`images/products/${ch.img}.jpg`:""), ph:!ch.img, color:ch.color||"#1f3fb0",
+          ta:{n:ch.ta,d:(ch.brand||"")+" "+ch.en}, en:{n:ch.en,d:(ch.brand||"")+" "+ch.en},
+          featured:false, hidden:true });
+      }
+    });
+  };
+  Object.keys(CATTREE).forEach(k=>walk(CATTREE[k], CATTREE[k].cat));
+})();
+
+/* Add the 5 drill-down tiles to the top of the Categories section. */
+["sharpeners","erasers","sketch","pencils","pens"].forEach(k=>{
+  const r=CATTREE[k];
+  CATEGORIES.unshift({ key:k, icon:r.icon, tree:k,
+    ta:{n:r[ "ta"], items:r.nodes.map(n=>n.ta)},
+    en:{n:r.en, items:r.nodes.map(n=>n.en)} });
+});
+
+/* ---- drill-down page state + rendering ---- */
+let treeRoot=null, treePath=[];
+function currentTreeNode(){
+  let node=CATTREE[treeRoot];
+  for(const idx of treePath) node=node.nodes[idx];
+  return node;
+}
+function treeTitle(node){ return node[LANG]!==undefined ? node[LANG] : (LANG==="ta"?node.ta:node.en); }
+function openTree(key){ treeRoot=key; treePath=[]; renderCatPage(); document.body.style.overflow="hidden";
+  $("#catPage").classList.add("open"); $("#catPageOverlay").classList.add("open"); }
+function closeTree(){ $("#catPage").classList.remove("open"); $("#catPageOverlay").classList.remove("open"); document.body.style.overflow=""; }
+function treeGoto(depth){ treePath=treePath.slice(0,depth); renderCatPage(); }
+function renderCatPage(){
+  const root=CATTREE[treeRoot];
+  const node=currentTreeNode();
+  // breadcrumb
+  let crumbs=[`<button class="cb" data-depth="0">${LANG==="ta"?root.ta:root.en}</button>`];
+  let acc=CATTREE[treeRoot];
+  treePath.forEach((idx,i)=>{ acc=acc.nodes[idx]; crumbs.push(`<i class="bi bi-chevron-right"></i><button class="cb" data-depth="${i+1}">${LANG==="ta"?acc.ta:acc.en}</button>`); });
+  $("#catCrumb").innerHTML = crumbs.join("");
+  $("#catTitle").textContent = LANG==="ta"?node.ta||root.ta:node.en||root.en;
+  // body: children
+  const kids=node.nodes||[];
+  const html = kids.map((ch,idx)=>{
+    if(ch.nodes){ // subcategory tile -> drill deeper
+      const items=ch.nodes.map(n=>LANG==="ta"?n.ta:n.en).slice(0,4);
+      return `<div class="col-6 col-md-4 col-lg-3">
+        <div class="ct-node reveal" data-cnode="${idx}" role="button" tabindex="0" style="--bc:${ch.color||'#1f3fb0'}">
+          <div class="ct-ic"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+          <h4>${LANG==="ta"?ch.ta:ch.en}</h4>
+          <div class="ct-sub">${items.map(x=>`<span>${x}</span>`).join("")}</div>
+          <span class="ct-go"><i class="bi bi-arrow-right"></i></span>
+        </div></div>`;
+    }
+    // leaf = product card with its OWN image + inline Add-to-Cart (no popup)
+    const p=getProduct(ch._id);
+    const thumb = p.ph
+      ? `<div class="p-thumb ph" style="--bc:${p.color||'#1f3fb0'}"><div class="ph-in"><span class="ph-nm">${pName(p)}</span></div></div>`
+      : `<div class="p-thumb"><img src="${p.img}" alt="${pName(p)}" loading="lazy" draggable="false" oncontextmenu="return false"><span class="p-shield"></span></div>`;
+    return `<div class="col-6 col-md-4 col-lg-3">
+      <article class="p-card reveal">
+        ${thumb}
+        <div class="p-body">
+          <h3 class="p-name">${pName(p)}</h3>
+          <p class="p-cat">${p.brand}</p>
+          <div class="p-ctrl" data-pid="${p.id}">${controlHTML(p.id)}</div>
+        </div>
+      </article></div>`;
+  }).join("");
+  $("#catPageBody").innerHTML = `<div class="row g-3 g-md-4">${html}</div>`;
+  observeReveal();
+}
+
+/* ============================================================================
+   MASTER CATEGORY TREE — one scalable system for the WHOLE catalogue.
+   Every main category opens a nested page (Category → Sub → Child → Products).
+   Products already in PRODUCTS are auto-attached as leaves by their `cat`.
+   To add depth in future, just nest more { ta,en,icon,color, nodes:[...] }.
+   ========================================================================== */
+const MASTER = [
+  { key:"stationery", icon:"bi-pencil-fill", color:"#1f3fb0", ta:"ஸ்டேஷனரி", en:"Stationery", nodes:[
+      { ta:"பேனா, பென்சில் & ஸ்கெட்ச்", en:"Pen, Pencil & Sketch", icon:"bi-pen-fill", color:"#1f3fb0",
+        refs:["pens","pencils","sketch","erasers","sharpeners"] },   // reuse the detailed CATTREE
+      { ta:"பேப்பர் & நோட்டு", en:"Paper & Notebooks", icon:"bi-journal-text", color:"#2c3e9e", auto:"paper" },
+      { ta:"ஃபைல் & ஃபோல்டர்", en:"Files & Filing", icon:"bi-folder-fill", color:"#17318c", auto:"filing" },
+      { ta:"ஃபாஸ்டனர் & பசை", en:"Fasteners & Adhesives", icon:"bi-paperclip", color:"#34495e", auto:"fasteners" },
+      { ta:"கட்டிங் & அளவீடு", en:"Cutting & Measuring", icon:"bi-scissors", color:"#16a085", auto:"cutting" },
+  ]},
+  { key:"art", icon:"bi-palette-fill", color:"#e8462b", ta:"கலை & கலர்", en:"Art & Colours", auto:"art" },
+  { key:"kits", icon:"bi-bag-heart-fill", color:"#8e44ad", ta:"கிட் & பேக்", en:"Kits & Bags", auto:"kits" },
+  { key:"fancy", icon:"bi-stars", color:"#e84393", ta:"ஃபேன்சி & பார்ட்டி", en:"Fancy & Party", auto:"fancy" },
+  { key:"toys", icon:"bi-controller", color:"#f39c12", ta:"பொம்மைகள்", en:"Toys & Games", auto:"toys" },
+  { key:"project", icon:"bi-cpu-fill", color:"#2c3e50", ta:"புராஜெக்ட்", en:"Project Items", auto:"project" },
+  { key:"other", icon:"bi-box-seam", color:"#607d8b", ta:"பிற பொருட்கள்", en:"Other", auto:"other" },
+];
+
+/* attach a product-list node: pulls all visible PRODUCTS of a category as leaves */
+function autoNode(catKey){
+  return PRODUCTS.filter(p=>!p.hidden && p.cat===catKey)
+    .map(p=>({ _id:p.id, ta:p.ta.n, en:p.en.n, brand:p.brand, color:p.color }));
+}
+/* expand refs (to CATTREE roots) + auto (to product categories) into real nodes */
+(function buildMaster(){
+  const expand=(node)=>{
+    if(node.refs){ node.nodes=(node.nodes||[]).concat(node.refs.map(k=>{
+        const r=CATTREE[k]; return { ta:r.ta, en:r.en, icon:r.icon, color:r.color||"#1f3fb0", _root:k, nodes:r.nodes }; })); delete node.refs; }
+    if(node.auto){ node.nodes=(node.nodes||[]).concat(autoNode(node.auto)); delete node.auto; }
+    (node.nodes||[]).forEach(expand);
+  };
+  MASTER.forEach(expand);
+})();
+const MASTER_BY_KEY = Object.fromEntries(MASTER.map(m=>[m.key,m]));
+
+/* ---- unified nested navigation over MASTER ---- */
+let mRoot=null, mPath=[];
+function mNode(){ let n=MASTER_BY_KEY[mRoot]; for(const i of mPath) n=n.nodes[i]; return n; }
+function openCat(key){ mRoot=key; mPath=[]; renderMaster(); document.body.style.overflow="hidden";
+  $("#catPage").classList.add("open"); $("#catPageOverlay").classList.add("open"); $("#catPage").scrollTop=0; }
+function mGoto(d){ mPath=mPath.slice(0,d); renderMaster(); $("#catPage").scrollTop=0; }
+function renderMaster(){
+  const root=MASTER_BY_KEY[mRoot]; const node=mNode();
+  let acc=root, crumbs=[`<button class="cb" data-mdepth="0">${LANG==="ta"?root.ta:root.en}</button>`];
+  mPath.forEach((idx,i)=>{ acc=acc.nodes[idx]; crumbs.push(`<i class="bi bi-chevron-right"></i><button class="cb" data-mdepth="${i+1}">${LANG==="ta"?acc.ta:acc.en}</button>`); });
+  $("#catCrumb").innerHTML=crumbs.join("");
+  $("#catTitle").textContent = LANG==="ta"?node.ta:node.en;
+  const kids=node.nodes||[];
+  const html=kids.map((ch,idx)=>{
+    if(ch.nodes && ch.nodes.length){        // category/sub-category tile -> go deeper
+      const sample=ch.nodes.map(n=>LANG==="ta"?n.ta:n.en).slice(0,4);
+      return `<div class="col-6 col-md-4 col-lg-3">
+        <div class="ct-node reveal" data-mnode="${idx}" role="button" tabindex="0" style="--bc:${ch.color||'#1f3fb0'}">
+          <div class="ct-ic"><i class="bi ${ch.icon||'bi-grid-3x3-gap-fill'}"></i></div>
+          <h4>${LANG==="ta"?ch.ta:ch.en}</h4>
+          <div class="ct-sub">${sample.map(x=>`<span>${x}</span>`).join("")}</div>
+          <span class="ct-go"><i class="bi bi-arrow-right"></i></span>
+        </div></div>`;
+    }
+    const p=getProduct(ch._id);            // leaf product -> own card + inline Add to Cart
+    const thumb = (!p||p.ph)
+      ? `<div class="p-thumb ph" style="--bc:${(p&&p.color)||ch.color||'#1f3fb0'}"><div class="ph-in"><span class="ph-nm">${p?pName(p):(LANG==='ta'?ch.ta:ch.en)}</span></div></div>`
+      : `<div class="p-thumb"><img src="${p.img}" alt="${pName(p)}" loading="lazy" draggable="false" oncontextmenu="return false"><span class="p-shield"></span></div>`;
+    return `<div class="col-6 col-md-4 col-lg-3"><article class="p-card reveal">${thumb}
+      <div class="p-body"><h3 class="p-name">${p?pName(p):''}</h3><p class="p-cat">${p?p.brand:''}</p>
+        <div class="p-ctrl" data-pid="${p?p.id:''}">${p?controlHTML(p.id):''}</div></div></article></div>`;
+  }).join("");
+  $("#catPageBody").innerHTML=`<div class="row g-3 g-md-4">${html}</div>`;
+  observeReveal();
+}
