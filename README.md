@@ -52,3 +52,21 @@ Edit the `MAP` object at the top of `js/script.js` with your exact share link.
 ## Prices
 Real-photo products show "Ask on WhatsApp"; catalogue items show MRP. Change the price
 model any time — tell me your own selling prices and I'll switch the display.
+
+
+## Update log (latest)
+- Removed the **About** tab and section (Contact kept).
+- **Call** button (phone icon) added next to Add-to-Cart on every product card and in the modal.
+- **Brands**: added **Flair** (data-driven — add more in the BRANDS list).
+- **Services** rebuilt: Printout / Xerox · Colour Printing (A3, A4, Photo, Certificate) ·
+  Lamination (A3, A4, Government ID) · Spiral Binding · Sticker Printing · **Certificates**
+  (Medical, Fitness, Return to Duty, Others). A3/A4-only cards removed; A3+A4 on every service.
+- **Nested categories**: Pens, Pencils, Sketch Pens, Erasers, Sharpeners open a drill-down
+  page (category → subcategory → product, each with its own Add-to-Cart + Call). Edit the
+  CATTREE object in js/script.js to change subcategories; give a leaf a real photo by adding
+  `img:"filename"` (saved at images/products/filename.jpg).
+- **Product images**: hover no longer exposes the browser's Google-Lens / visual-search /
+  three-dot menu (an overlay shield blocks it); the in-card magnifier was removed.
+- **Contact** made compact; Phone and WhatsApp combined into one "Phone / WhatsApp" section.
+- **English branding**: logo shows "Sri Siva Book Store" and an "S" mark; tab title and the
+  favicon updated to Sri Siva Book Store.
