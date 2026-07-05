@@ -751,7 +751,6 @@ const MASTER = [
       { ta:"கட்டிங் & அளவீடு", en:"Cutting & Measuring", icon:"bi-scissors", color:"#16a085", auto:"cutting" },
   ]},
   { key:"art", icon:"bi-palette-fill", color:"#e8462b", ta:"கலை & கலர்", en:"Art & Colours", auto:"art" },
-  { key:"kits", icon:"bi-bag-heart-fill", color:"#8e44ad", ta:"கிட் & பேக்", en:"Kits & Bags", auto:"kits" },
   { key:"fancy", icon:"bi-stars", color:"#e84393", ta:"ஃபேன்சி & பார்ட்டி", en:"Fancy & Party", auto:"fancy" },
   { key:"toys", icon:"bi-controller", color:"#f39c12", ta:"பொம்மைகள்", en:"Toys & Games", auto:"toys" },
   { key:"project", icon:"bi-cpu-fill", color:"#2c3e50", ta:"புராஜெக்ட்", en:"Project Items", auto:"project" },
