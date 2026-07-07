@@ -351,3 +351,15 @@ html[lang="ta"] .site-footer h5{font-family:var(--f-head-ta)}
 @media(max-width:575px){#brandGrid.brand-grid{grid-template-columns:repeat(3,1fr);gap:10px}
   .brand-chip{min-height:64px;padding:10px 8px}
   .brand-chip .brand-word{font-size:.86rem;padding:6px 9px}}
+
+/* v7: search — clear button + highlight matched cards */
+.search-wrap input{padding-right:2.6rem}
+.search-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:30px;height:30px;
+  border:none;border-radius:50%;background:var(--soft);color:var(--muted);display:none;place-items:center;
+  cursor:pointer;font-size:.85rem;transition:.15s}
+.search-wrap.has-text .search-clear{display:grid}
+.search-clear:hover{background:var(--accent);color:#fff}
+#productsGrid.searching .p-card{animation:matchPop .28s ease}
+#productsGrid.searching .p-card{box-shadow:0 0 0 2px var(--primary-soft),0 10px 26px -16px rgba(31,63,176,.5)}
+#productsGrid.searching .p-card:hover{box-shadow:0 0 0 2px var(--primary),var(--shadow)}
+@keyframes matchPop{from{opacity:.3;transform:translateY(8px)}to{opacity:1;transform:none}}
