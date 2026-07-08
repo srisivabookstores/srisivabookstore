@@ -353,6 +353,72 @@ const PRODUCTS = [
 /* normalise existing products to the new category hierarchy */
 PRODUCTS.forEach(p=>{ if(CATID_OVERRIDE[p.id]) p.cat=CATID_OVERRIDE[p.id]; else if(CATMAP[p.cat]) p.cat=CATMAP[p.cat]; });
 
+/* ---- Bulk product add (placeholder tiles; skips names that already exist) ---- */
+function addBulkProducts(){
+  const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g,"").replace(/s$/,"");
+  const seen = new Set();
+  PRODUCTS.forEach(p=>{ seen.add(norm(p.en.n)); seen.add(norm(p.ta.n)); });
+  const COLOR = { writing:"#1f3fb0", paper:"#2c3e9e", filing:"#17318c", fasteners:"#34495e",
+                  cutting:"#16a085", art:"#e8462b", schooledu:"#0e8a5f", project:"#2c3e50", other:"#607d8b" };
+  // [category, English name, optional Tamil, optional brand]
+  const BULK = [
+    // WRITING INSTRUMENTS -> Stationery > Pen, Pencil & Sketch (cat "writing")
+    ["writing","Ball Pen","பால் பேனா"],["writing","Gel Pen","ஜெல் பேனா"],["writing","Ink Pen","இங்க் பேனா"],
+    ["writing","Fountain Pen","ஃபவுண்டன் பேனா"],["writing","Tip Pencil","டிப் பென்சில்"],["writing","Pencil","பென்சில்"],
+    ["writing","Slate Pencil","ஸ்லேட் பென்சில்"],["writing","Sketch Pens","ஸ்கெட்ச் பேனா"],["writing","Markers","மார்க்கர்"],
+    ["writing","Permanent Markers","பெர்மனன்ட் மார்க்கர்"],["writing","Whiteboard Markers","வொயிட்போர்டு மார்க்கர்"],
+    ["writing","Highlighters","ஹைலைட்டர்"],["writing","Glitter Pens","கிளிட்டர் பேனா"],["writing","Ink Bottles","இங்க் பாட்டில்"],
+    ["writing","Ink Fillers","இங்க் ஃபில்லர்"],["writing","Ink Erasers","இங்க் அழிப்பான்"],["writing","Correction Pen","கரெக்ஷன் பேனா"],
+    // PAPER & NOTEBOOKS -> cat "paper"
+    ["paper","A4 Sheet","A4 ஷீட்"],["paper","Colour Sheets","கலர் ஷீட்"],["paper","Carbon Sheets","கார்பன் ஷீட்"],
+    ["paper","Photo Sheets","ஃபோட்டோ ஷீட்"],["paper","OHP Sheets","OHP ஷீட்"],["paper","Glitter Sheets","கிளிட்டர் ஷீட்"],
+    ["paper","Spiral Pad","ஸ்பைரல் பேட்"],["paper","Exam Pads","எக்ஸாம் பேட்"],["paper","Sticky Pads","ஸ்டிக்கி பேட்"],
+    ["paper","Pocket Diary","பாக்கெட் டைரி"],["paper","Files & Folders","ஃபைல்ஸ் & ஃபோல்டர்ஸ்"],["paper","Protectors","புரொடெக்டர்"],
+    ["paper","ATM Cards","ATM கார்டு"],["paper","Photo Albums","ஃபோட்டோ ஆல்பம்"],["paper","Visiting Card Albums","விசிட்டிங் கார்டு ஆல்பம்"],
+    ["paper","Note Book Labels","நோட்டுப் புத்தக லேபிள்"],
+    // DESKTOP & OFFICE ORGANIZATION -> Files & Filing (filing)
+    ["filing","Pen Stand","பேனா ஸ்டாண்ட்"],["filing","Ring Binders","ரிங் பைண்டர்"],["filing","File Folders","ஃபைல் ஃபோல்டர்"],
+    ["filing","Clipboard","கிளிப்போர்டு"],["filing","Desk Organizers","டெஸ்க் ஆர்கனைசர்"],["filing","Magazine Files","மேகசின் ஃபைல்"],
+    ["filing","Document Trays","டாக்குமெண்ட் ட்ரே"],["filing","Pin Holders","பின் ஹோல்டர்"],
+    // DESKTOP & OFFICE ORGANIZATION -> Fasteners & Adhesives (fasteners)
+    ["fasteners","Gem Clips","ஜெம் கிளிப்"],["fasteners","Plastic Paper Clips","பிளாஸ்டிக் பேப்பர் கிளிப்"],
+    ["fasteners","Steel Paper Clips","ஸ்டீல் பேப்பர் கிளிப்"],["fasteners","Binder Clips","பைண்டர் கிளிப்"],
+    ["fasteners","Table Clips","டேபிள் கிளிப்"],["fasteners","Rubber Bands","ரப்பர் பேண்ட்"],["fasteners","Bell Pins","பெல் பின்"],
+    ["fasteners","Board Pins","போர்டு பின்"],["fasteners","Push Pins","புஷ் பின்"],["fasteners","Staplers","ஸ்டேப்லர்"],
+    ["fasteners","Stapler Pins","ஸ்டேப்லர் பின்"],["fasteners","Punching Machines","பஞ்சிங் மெஷின்"],
+    // CUTTING & MEASURING -> cutting
+    ["cutting","Steel Scale","ஸ்டீல் ஸ்கேல்"],["cutting","Wooden Scale","மர ஸ்கேல்"],["cutting","Compass","கம்பாஸ்"],
+    ["cutting","Geometry Box","ஜியோமெட்ரி பாக்ஸ்"],["cutting","Measuring Tapes","மெஷரிங் டேப்"],["cutting","Pro Circle","புரோ சர்க்கிள்"],
+    ["cutting","Scissors","கத்திரிக்கோல்"],["cutting","Pencil Cutters","பென்சில் கட்டர்"],["cutting","Sharpeners","ஷார்ப்பனர்"],
+    ["cutting","Erasers","அழிப்பான்"],
+    // ART & CRAFT -> art
+    ["art","Chalk Piece","சாக் பீஸ்"],["art","Water Colours","வாட்டர் கலர்"],["art","Paints","பெயிண்ட்"],["art","Paint Brush","பெயிண்ட் பிரஷ்"],
+    ["art","Crayons","கிரேயான்ஸ்"],["art","Glue","க்ளூ"],["art","Glue Gun","க்ளூ கன்"],["art","Glue Sticks","க்ளூ ஸ்டிக்"],
+    ["art","Gum Paste","கம் பேஸ்ட்"],["art","Fevicol","ஃபெவிகால்","Fevicol"],["art","Fevi Gum","ஃபெவி கம்","Fevicol"],
+    ["art","Fevi Sticks","ஃபெவி ஸ்டிக்","Fevicol"],["art","Fevikwik","ஃபெவிக்விக்","Fevikwik"],["art","Flex Kwik","ஃபிளெக்ஸ் க்விக்"],
+    ["art","Brown Tapes","பிரவுன் டேப்"],["art","Cello Tapes","செல்லோ டேப்","Cello"],["art","Glitter Tapes","கிளிட்டர் டேப்"],
+    ["art","EB Tapes","EB டேப்"],["art","Foam Sheets","ஃபோம் ஷீட்"],["art","Ice Cream Sticks","ஐஸ்கிரீம் ஸ்டிக்"],
+    ["project","Project Items","புராஜெக்ட் பொருட்கள்"],
+    // SCHOOL & EDUCATIONAL -> new category "schooledu"
+    ["schooledu","Slate","ஸ்லேட்"],["schooledu","White Board","வொயிட் போர்டு"],["schooledu","Black Board","பிளாக் போர்டு"],
+    ["schooledu","Board Dusters","போர்டு டஸ்டர்"],["schooledu","Note Dumpers","நோட் டம்பர்"],["schooledu","Pencil Box","பென்சில் பாக்ஸ்"],
+    ["schooledu","Pencil Pouch","பென்சில் பவுச்"],["schooledu","Pencil & Pen Kids Items","பென்சில் & பேனா கிட்ஸ் பொருட்கள்"],
+    // MISCELLANEOUS -> other
+    ["other","Key Chains","கீ செயின்"],["other","Safety Pins","சேஃப்டி பின்"],["other","Needles","ஊசி"],
+    ["other","Magnifying Lens","மேக்னிஃபையிங் லென்ஸ்"],["other","M-Seals","எம்-சீல்"],["other","Pelican","பெலிக்கன்","Pelican"],
+    ["other","ID Rope","ID ரோப்"],["other","ID Cards","ID கார்டு"],["other","Complementary Gifts","காம்ப்ளிமெண்டரி கிஃப்ட்"],
+    ["other","Brown Rolls","பிரவுன் ரோல்"],["other","Mitra PVC Rolls","மித்ரா PVC ரோல்"],
+  ];
+  let id = 1000;
+  BULK.forEach(([cat,en,ta,brand])=>{
+    const key = norm(en);
+    if(seen.has(key)) return;                 // duplicate -> skip
+    seen.add(key);
+    PRODUCTS.push({ id:id++, cat, brand:brand||"Assorted", img:"", ph:true, color:COLOR[cat]||"#1f3fb0",
+      mrp:"", ta:{n:ta||en,d:(brand?brand+" ":"")+en}, en:{n:en,d:(brand?brand+" ":"")+en}, featured:false });
+  });
+}
+
 
 /* ==================================================================== */
 let LANG = "ta", activeFilter = "all", searchTerm = "", CART = loadCart();
@@ -763,9 +829,11 @@ function renderCatPage(){
    Products already in PRODUCTS are auto-attached as leaves by their `cat`.
    To add depth in future, just nest more { ta,en,icon,color, nodes:[...] }.
    ========================================================================== */
+addBulkProducts();   // add bulk products now (after tree leaves exist) so dedup is complete
 const MASTER = [
   { key:"stationery", icon:"bi-pencil-fill", color:"#1f3fb0", ta:"ஸ்டேஷனரி", en:"Stationery", nodes:[
       { ta:"பேனா, பென்சில் & ஸ்கெட்ச்", en:"Pen, Pencil & Sketch", icon:"bi-pen-fill", color:"#1f3fb0",
+        auto:"writing",
         refs:["pens","pencils","sketch","erasers","sharpeners"] },   // reuse the detailed CATTREE
       { ta:"பேப்பர் & நோட்டு", en:"Paper & Notebooks", icon:"bi-journal-text", color:"#2c3e9e", auto:"paper" },
       { ta:"ஃபைல் & ஃபோல்டர்", en:"Files & Filing", icon:"bi-folder-fill", color:"#17318c", auto:"filing" },
@@ -776,6 +844,7 @@ const MASTER = [
   { key:"fancy", icon:"bi-stars", color:"#e84393", ta:"ஃபேன்சி & பார்ட்டி", en:"Fancy & Party", auto:"fancy" },
   { key:"toys", icon:"bi-controller", color:"#f39c12", ta:"பொம்மைகள்", en:"Toys & Games", auto:"toys" },
   { key:"project", icon:"bi-cpu-fill", color:"#2c3e50", ta:"புராஜெக்ட்", en:"Project Items", auto:"project" },
+  { key:"schooledu", icon:"bi-mortarboard-fill", color:"#0e8a5f", ta:"பள்ளி & கல்வி", en:"School & Educational", auto:"schooledu" },
   { key:"other", icon:"bi-box-seam", color:"#607d8b", ta:"பிற பொருட்கள்", en:"Other", auto:"other" },
 ];
 
