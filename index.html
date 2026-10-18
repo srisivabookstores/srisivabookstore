@@ -27,6 +27,7 @@
       <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link active" data-spy href="#home" data-i18n="nav_home">முகப்பு</a></li>
         <li class="nav-item"><a class="nav-link" data-spy href="#services" data-i18n="nav_services">சேவைகள்</a></li>
+        <li class="nav-item"><a class="nav-link" data-spy href="#csc" data-i18n="nav_csc">CSC சேவைகள்</a></li>
         <li class="nav-item"><a class="nav-link" data-spy href="#products" data-i18n="nav_products">பொருட்கள்</a></li>
         <li class="nav-item"><a class="nav-link" data-spy href="#contact" data-i18n="nav_contact">தொடர்பு</a></li>
       </ul>
@@ -59,6 +60,7 @@
     <div class="hero-strip reveal">
       <a href="#brands" class="pill"><i class="bi bi-pencil-fill me-1"></i>Stationery Supplies</a>
       <a href="#services" class="pill"><i class="bi bi-printer-fill me-1"></i>Xerox · Print · Lamination</a>
+      <a href="#csc" class="pill"><i class="bi bi-person-vcard-fill me-1"></i>CSC · e-Services</a>
       <a href="#products" class="pill"><i class="bi bi-gift-fill me-1"></i>Fancy · Gift · Party</a>
     </div>
   </div>
@@ -74,6 +76,18 @@
       <p class="sec-lead" data-i18n="svc_lead">பிரிண்ட், ஜெராக்ஸ், லேமினேஷன், ஸ்பைரல் பைண்டிங் — ஒரே இடத்தில்.</p>
     </div>
     <div class="svc-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== CSC SERVICES (placed before Products / Stationery) ===================== -->
+<section class="section csc-section" id="csc">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="csc_eye">ஆன்லைன் சேவைகள்</span>
+      <h2 class="sec-title" data-i18n="csc_title">CSC சேவைகள்</h2>
+      <p class="sec-lead" data-i18n="csc_lead">PAN, ஆதார், ரேஷன் கார்டு, அரசுத் தேர்வு விண்ணப்பங்கள் மற்றும் பல — விவரங்களுக்கு வாட்ஸ்அப்பில் கேளுங்கள்.</p>
+    </div>
+    <div class="svc-grid csc-grid" id="cscGrid"></div>
   </div>
 </section>
 
@@ -138,7 +152,9 @@
       </div>
       <div class="col-lg-7">
         <div class="map-card">
-          <iframe id="mapFrame" class="map-frame" title="Sri Siva Book Store — Uthangarai" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <iframe id="mapFrame" class="map-frame" title="Sri Siva Book Store — Uthangarai"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.67029545698384!2d78.52844593629254!3d12.266898365476354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac5dd35fb283ab%3A0x6c43e7ace1f1b385!2sSri%20Siva%20Book%20Store!5e0!3m2!1sen!2sin!4v1792327941733!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
           <div class="map-actions">
             <a href="#" id="mapDir" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-signpost-2-fill"></i> <span data-i18n="map_dir">வழிகாட்டுதல் பெறவும்</span></a>
             <a href="#" id="mapOpen" target="_blank" rel="noopener" class="btn btn-outline"><i class="bi bi-geo-alt-fill"></i> <span data-i18n="map_open">கூகுள் மேப்ஸில் திறக்கவும்</span></a>
@@ -163,6 +179,7 @@
         <ul>
           <li><a href="#brands" data-i18n="nav_brands">பிராண்டுகள்</a></li>
           <li><a href="#services" data-i18n="nav_services">சேவைகள்</a></li>
+          <li><a href="#csc" data-i18n="nav_csc">CSC சேவைகள்</a></li>
           <li><a href="#products" data-i18n="nav_products">பொருட்கள்</a></li>
         </ul>
       </div>
