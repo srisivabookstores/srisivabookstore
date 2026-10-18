@@ -10,9 +10,9 @@ const STORE = {
   phone2Display: "+91 9003703237",
 };
 
-/* Google Maps — replace all three with your exact share link when ready. */
+/* Google Maps — embed is the exact Sri Siva Book Store iframe URL (also set directly on #mapFrame in index.html). */
 const MAP = {
-  embed:      "https://maps.google.com/maps?q=Sri%20Siva%20Book%20Store%2C%20Uthangarai%2C%20Tamil%20Nadu&z=15&output=embed",
+  embed:      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.67029545698384!2d78.52844593629254!3d12.266898365476354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac5dd35fb283ab%3A0x6c43e7ace1f1b385!2sSri%20Siva%20Book%20Store!5e0!3m2!1sen!2sin!4v1792327941733!5m2!1sen!2sin",
   open:       "https://www.google.com/maps/search/?api=1&query=Sri+Siva+Book+Store+Uthangarai+Tamil+Nadu",
   directions: "https://www.google.com/maps/dir/?api=1&destination=Sri+Siva+Book+Store+Uthangarai+Tamil+Nadu",
 };
@@ -22,7 +22,7 @@ const I18N = {
   ta:{
     brand_name:"ஸ்ரீ சிவா புத்தக நிலையம்", brand_sub:"ஊத்தங்கரை, தமிழ்நாடு", brand_mark:"S",
     nav_home:"முகப்பு", nav_categories:"வகைகள்", nav_brands:"பிராண்டுகள்",
-    nav_services:"சேவைகள்", nav_products:"பொருட்கள்", nav_about:"எங்களைப் பற்றி", nav_contact:"தொடர்பு",
+    nav_services:"சேவைகள்", nav_csc:"CSC சேவைகள்", nav_products:"பொருட்கள்", nav_about:"எங்களைப் பற்றி", nav_contact:"தொடர்பு",
     hero_loc:"ஊத்தங்கரை • தமிழ்நாடு",
     hero_title:'ஸ்ரீ சிவா <span class="u">புத்தக நிலையம்</span>',
     hero_tag:"ஸ்டேஷனரி | ஜெராக்ஸ் | பிரிண்ட் அவுட் | லேமினேஷன் | ஸ்பைரல் பைண்டிங் | பர்த்டே & கிஃப்ட் ஐட்டம்ஸ் | ஃபேன்சி ஐட்டம்ஸ்",
@@ -40,6 +40,9 @@ const I18N = {
     svc_eye:"எங்கள் சேவைகள்", svc_title:"பிரிண்ட் & பைண்டிங் சேவைகள்",
     svc_lead:"பிரிண்ட், ஜெராக்ஸ், லேமினேஷன், ஸ்பைரல் பைண்டிங் — ஒரே இடத்தில்.",
     svc_ask:"கேளுங்கள்",
+
+    csc_eye:"ஆன்லைன் சேவைகள்", csc_title:"CSC சேவைகள்",
+    csc_lead:"PAN, ஆதார், ரேஷன் கார்டு, அரசுத் தேர்வு விண்ணப்பங்கள் மற்றும் பல — விவரங்களுக்கு வாட்ஸ்அப்பில் கேளுங்கள்.",
 
     feat_eye:"தேர்ந்தெடுக்கப்பட்டவை", feat_title:"சிறப்பு பொருட்கள்",
     feat_lead:"கடையில் அதிகம் விற்பனையாகும் பொருட்கள்.",
@@ -78,7 +81,7 @@ const I18N = {
   en:{
     brand_name:"Sri Siva Book Store", brand_sub:"Uthangarai, Tamil Nadu", brand_mark:"S",
     nav_home:"Home", nav_categories:"Categories", nav_brands:"Brands",
-    nav_services:"Services", nav_products:"Products", nav_about:"About", nav_contact:"Contact",
+    nav_services:"Services", nav_csc:"CSC Services", nav_products:"Products", nav_about:"About", nav_contact:"Contact",
     hero_loc:"Uthangarai • Tamil Nadu",
     hero_title:'Sri Siva <span class="u">Book Store</span>',
     hero_tag:"Stationery | Xerox | Print Out | Lamination | Spiral Binding | Birthday & Gift Items | Fancy Items",
@@ -96,6 +99,9 @@ const I18N = {
     svc_eye:"Our services", svc_title:"Print & Binding Services",
     svc_lead:"Print, Xerox, lamination and spiral binding — all in one place.",
     svc_ask:"Ask",
+
+    csc_eye:"Online services", csc_title:"CSC Services",
+    csc_lead:"PAN, Aadhaar, ration card, government exam applications and more — ask on WhatsApp for details.",
 
     feat_eye:"Hand-picked", feat_title:"Featured Products",
     feat_lead:"Popular, fast-moving items from the store.",
@@ -210,6 +216,17 @@ const SERVICES = [
   { icon:"bi-journal-bookmark-fill", ta:{n:"ஸ்பைரல் பைண்டிங்"}, en:{n:"Spiral Binding"}, ta_tags:["A3","A4","லீகல்"], en_tags:["A3","A4","Legal"] },
   { icon:"bi-sticky-fill",   ta:{n:"ஸ்டிக்கர் பிரிண்டிங்"}, en:{n:"Sticker Printing"}, ta_tags:["A3","A4","லேபிள்"],     en_tags:["A3","A4","Label"] },
   { icon:"bi-patch-check-fill", ta:{n:"சான்றிதழ்கள்"}, en:{n:"Certificates"}, ta_tags:["மெடிக்கல்","ஃபிட்னஸ்","ரிட்டர்ன் டு டியூட்டி","இதர"], en_tags:["Medical","Fitness","Return to Duty","Others"] },
+];
+
+/* ---------------- CSC Services (rendered before Products / Stationery) ----------------
+   Data-driven: add/remove a line to change the cards. No prices or claims — WhatsApp enquiry only. */
+const CSC_SERVICES = [
+  { icon:"bi-credit-card-2-front-fill", ta:{n:"பான் கார்டு சேவைகள்"},           en:{n:"PAN Card Services"} },
+  { icon:"bi-person-vcard-fill",        ta:{n:"ஆதார் கார்டு சேவைகள்"},          en:{n:"Aadhaar Card Services"} },
+  { icon:"bi-basket2-fill",             ta:{n:"ரேஷன் கார்டு சேவைகள்"},          en:{n:"Ration Card Services"} },
+  { icon:"bi-mortarboard-fill",         ta:{n:"அரசுத் தேர்வு விண்ணப்பங்கள்"},   en:{n:"Government Exam Applications"} },
+  { icon:"bi-ticket-perforated-fill",   ta:{n:"ஆன்லைன் டிக்கெட் முன்பதிவு"},    en:{n:"Online Ticket Bookings"} },
+  { icon:"bi-laptop-fill",              ta:{n:"தமிழ்நாடு இ-சேவைகள் (TN e-Services)"}, en:{n:"Tamil Nadu e-Services (TN e-Services)"} },
 ];
 
 /* ---------------- Products (real photos only) ---------------- */
@@ -501,6 +518,14 @@ function renderServices(){
       <a class="svc-wa" href="${waService(s)}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>${t("wa")}</a>
     </div>`).join("");
 }
+function renderCsc(){
+  const g=$("#cscGrid"); if(!g) return;
+  g.innerHTML = CSC_SERVICES.map(s=>`
+    <div class="svc-card csc-card reveal">
+      <div class="svc-top"><span class="svc-ic"><i class="bi ${s.icon}"></i></span><h3>${s[LANG].n}</h3></div>
+      <a class="svc-wa" href="${waService(s)}" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>${t("wa")}</a>
+    </div>`).join("");
+}
 function cardHTML(p){
   const price = p.mrp ? ` · <span class="p-price">MRP ₹${p.mrp}</span>` : "";
   const thumb = p.ph
@@ -612,7 +637,7 @@ function applyI18n(){
   $$(".lang-menu button").forEach(b=>b.classList.toggle("sel",b.dataset.lang===LANG));
 }
 function setLanguage(l){ LANG=l; try{localStorage.setItem("ssbs_lang",l);}catch(e){} $("#langMenu").classList.remove("open");
-  applyI18n(); renderCategories(); renderBrands(); renderServices(); renderPills(); renderProducts(); syncCart(); if(mRoot && $("#catPage").classList.contains("open")) renderMaster(); }
+  applyI18n(); renderCategories(); renderBrands(); renderServices(); renderCsc(); renderPills(); renderProducts(); syncCart(); observeReveal(); if(mRoot && $("#catPage").classList.contains("open")) renderMaster(); }
 
 /* ---------- reveal ---------- */
 let revObs;
@@ -631,9 +656,9 @@ function initSpy(){
 document.addEventListener("DOMContentLoaded",()=>{
   try{ const s=localStorage.getItem("ssbs_lang"); if(s)LANG=s; }catch(e){}
   $("#year").textContent=new Date().getFullYear();
-  $("#mapFrame").src=MAP.embed; $("#mapOpen").href=MAP.open; $("#mapDir").href=MAP.directions; $("#heroDir").href=MAP.directions;
+  { const mf=$("#mapFrame"); if(mf.getAttribute("src")!==MAP.embed) mf.src=MAP.embed; } $("#mapOpen").href=MAP.open; $("#mapDir").href=MAP.directions; $("#heroDir").href=MAP.directions;
 
-  applyI18n(); renderCategories(); renderBrands(); renderServices(); renderPills(); renderProducts();
+  applyI18n(); renderCategories(); renderBrands(); renderServices(); renderCsc(); renderPills(); renderProducts();
   syncCart(); initSpy(); observeReveal();
 
   document.body.addEventListener("click",(e)=>{
