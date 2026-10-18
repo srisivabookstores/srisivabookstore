@@ -1,255 +1,321 @@
 <!DOCTYPE html>
 <html lang="ta">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sri Siva Book Store | ஸ்ரீ சிவா புத்தக நிலையம் — Uthangarai</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3fb0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-weight='700' fill='%23f6b301' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
-<meta name="description" content="ஸ்ரீ சிவா புத்தக நிலையம், ஊத்தங்கரை — தரமான ஸ்டேஷனரி, பள்ளி & அலுவலகப் பொருட்கள், ஃபேன்சி பொருட்கள், ஜெராக்ஸ், லேமினேஷன், ஸ்பைரல் பைண்டிங் & பிரிண்டிங் சேவைகள்.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Baloo+Thambi+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Siva Book Store | ஸ்ரீ சிவா புத்தக நிலையம் — Uthangarai</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3fb0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-weight='700' fill='%23f6b301' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+  <meta name="description"
+    content="ஸ்ரீ சிவா புத்தக நிலையம், ஊத்தங்கரை — தரமான ஸ்டேஷனரி, பள்ளி & அலுவலகப் பொருட்கள், ஃபேன்சி பொருட்கள், ஜெராக்ஸ், லேமினேஷன், ஸ்பைரல் பைண்டிங் & பிரிண்டிங் சேவைகள்.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Baloo+Thambi+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- ===================== NAVBAR ===================== -->
-<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="#home">
-      <span class="brand-mark" data-i18n="brand_mark">S</span>
-      <span class="brand-text"><span class="brand-name" data-i18n="brand_name">ஸ்ரீ சிவா புத்தக நிலையம்</span><span class="brand-sub" data-i18n="brand_sub">ஊத்தங்கரை, தமிழ்நாடு</span></span>
-    </a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link active" data-spy href="#home" data-i18n="nav_home">முகப்பு</a></li>
-        <li class="nav-item"><a class="nav-link" data-spy href="#services" data-i18n="nav_services">சேவைகள்</a></li>
-        <li class="nav-item"><a class="nav-link" data-spy href="#csc" data-i18n="nav_csc">CSC சேவைகள்</a></li>
-        <li class="nav-item"><a class="nav-link" data-spy href="#products" data-i18n="nav_products">பொருட்கள்</a></li>
-        <li class="nav-item"><a class="nav-link" data-spy href="#contact" data-i18n="nav_contact">தொடர்பு</a></li>
-      </ul>
-      <div class="nav-tools ms-lg-3">
-        <div class="lang-wrap">
-          <button class="btn-lang" id="langBtn"><i class="bi bi-translate"></i> <span id="langLabel">தமிழ்</span> <i class="bi bi-chevron-down" style="font-size:.7rem"></i></button>
-          <div class="lang-menu" id="langMenu">
-            <button data-lang="ta" class="sel"><i class="bi bi-check-lg"></i> தமிழ்</button>
-            <button data-lang="en"><i class="bi bi-check-lg"></i> English</button>
-          </div>
-        </div>
-        <a class="nav-cart nav-call" href="tel:+919150620572" aria-label="Call"><i class="bi bi-telephone-fill"></i></a>
-        <button class="nav-cart" id="navCart" aria-label="Cart"><i class="bi bi-cart3"></i><span class="count" id="navCartCount">0</span></button>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!-- ===================== HERO ===================== -->
-<header class="hero" id="home">
-  <div class="container text-center">
-    <span class="hero-loc reveal"><i class="bi bi-geo-alt-fill"></i> <span data-i18n="hero_loc">ஊத்தங்கரை • தமிழ்நாடு</span></span>
-    <h1 class="reveal" data-i18n-html="hero_title">ஸ்ரீ சிவா <span class="u">புத்தக நிலையம்</span></h1>
-    <p class="hero-tag reveal" data-i18n="hero_tag">ஸ்டேஷனரி | ஜெராக்ஸ் | பிரிண்ட் அவுட் | லேமினேஷன் | ஸ்பைரல் பைண்டிங் | பர்த்டே & கிஃப்ட் ஐட்டம்ஸ் | ஃபேன்சி ஐட்டம்ஸ்</p>
-    <div class="hero-cta reveal">
-      <a href="#products" class="btn btn-accent"><i class="bi bi-grid-fill me-1"></i><span data-i18n="hero_view">பொருட்களை பார்க்கவும்</span></a>
-      <a href="#contact" class="btn btn-ghost"><i class="bi bi-telephone-fill me-1"></i><span data-i18n="hero_contact">தொடர்பு கொள்ளவும்</span></a>
-      <a href="#" id="heroDir" target="_blank" rel="noopener" class="btn btn-ghost"><i class="bi bi-signpost-2-fill me-1"></i><span data-i18n="hero_dir">வழிகாட்டுதலை பெறவும்</span></a>
-    </div>
-    <div class="hero-strip reveal">
-      <a href="#brands" class="pill"><i class="bi bi-pencil-fill me-1"></i>Stationery Supplies</a>
-      <a href="#services" class="pill"><i class="bi bi-printer-fill me-1"></i>Xerox · Print · Lamination</a>
-      <a href="#csc" class="pill"><i class="bi bi-person-vcard-fill me-1"></i>CSC · e-Services</a>
-      <a href="#products" class="pill"><i class="bi bi-gift-fill me-1"></i>Fancy · Gift · Party</a>
-    </div>
-  </div>
-</header>
-
-
-<!-- ===================== SERVICES ===================== -->
-<section class="section" id="services">
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow accent" data-i18n="svc_eye">எங்கள் சேவைகள்</span>
-      <h2 class="sec-title" data-i18n="svc_title">பிரிண்ட் & பைண்டிங் சேவைகள்</h2>
-      <p class="sec-lead" data-i18n="svc_lead">பிரிண்ட், ஜெராக்ஸ், லேமினேஷன், ஸ்பைரல் பைண்டிங் — ஒரே இடத்தில்.</p>
-    </div>
-    <div class="svc-grid" id="servicesGrid"></div>
-  </div>
-</section>
-
-<!-- ===================== CSC SERVICES (placed before Products / Stationery) ===================== -->
-<section class="section csc-section" id="csc">
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow" data-i18n="csc_eye">ஆன்லைன் சேவைகள்</span>
-      <h2 class="sec-title" data-i18n="csc_title">CSC சேவைகள்</h2>
-      <p class="sec-lead" data-i18n="csc_lead">PAN, ஆதார், ரேஷன் கார்டு, அரசுத் தேர்வு விண்ணப்பங்கள் மற்றும் பல — விவரங்களுக்கு வாட்ஸ்அப்பில் கேளுங்கள்.</p>
-    </div>
-    <div class="svc-grid csc-grid" id="cscGrid"></div>
-  </div>
-</section>
-
-<!-- ===================== OUR PRODUCTS (with categories inside) ===================== -->
-<section class="section soft" id="products">
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow" data-i18n="prod_eye">பார்த்து • கேளுங்கள்</span>
-      <h2 class="sec-title" data-i18n="prod_title">எங்கள் பொருட்கள்</h2>
-      <p class="sec-lead" data-i18n="prod_lead">பொருளைத் தட்டி விவரங்களைப் பார்க்கவும்.</p>
-    </div>
-
-    <div class="toolbar mb-4">
-      <div class="row g-3 align-items-center">
-        <div class="col-lg-6 mx-auto"><div class="search-wrap"><i class="bi bi-search"></i><input id="searchInput" type="search" data-i18n-ph="search_ph" placeholder="பொருட்களைத் தேடுங்கள்…" autocomplete="off"><button class="search-clear" id="searchClear" type="button" aria-label="Clear"><i class="bi bi-x-lg"></i></button></div></div>
-        <div class="col-12"><div class="pills" id="filterPills"></div></div>
-      </div>
-    </div>
-
-    <div class="prod-subhead"><h3 class="sub-title" data-i18n="cat_title">பொருள் வகைகள்</h3></div>
-    <div class="cat-grid" id="categoryGrid"></div>
-
-    <div class="row g-3 g-md-4 mt-1" id="productsGrid"></div>
-    <div class="text-center mt-2"><span class="result-count" id="resultCount"></span></div>
-    <div class="text-center mt-4"><button id="loadMore" class="btn btn-outline" style="display:none">Load more</button></div>
-  </div>
-</section>
-
-<!-- ===================== BRANDS ===================== -->
-<section class="section soft brands-compact" id="brands">
-  <div class="container">
-    <div class="sec-head" style="margin-bottom:26px">
-      <span class="eyebrow" data-i18n="brand_eye">நம்பகமான பிராண்டுகள்</span>
-      <h2 class="sec-title" data-i18n="brand_title">எங்கள் பிராண்டுகள்</h2>
-      <p class="sec-lead" data-i18n="brand_lead">நாங்கள் வழங்கும் நம்பகமான பிராண்டுகள்.</p>
-    </div>
-    <div class="brand-grid" id="brandGrid"></div>
-    <p class="brand-note" data-i18n="brand_note">* பிராண்ட் பெயர்கள் மற்றும் லோகோக்கள் அந்தந்த நிறுவனங்களுக்கு சொந்தமானவை.</p>
-  </div>
-</section>
-
-<section class="section soft" id="contact">
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow accent" data-i18n="contact_eye">தொடர்பு கொள்ள</span>
-      <h2 class="sec-title" data-i18n="contact_title">எங்களைத் தொடர்பு கொள்ளுங்கள்</h2>
-      <p class="sec-lead" data-i18n="contact_lead">விலை மற்றும் இருப்பு அறிய அழைக்கவும் அல்லது வாட்ஸ்அப் செய்யவும்.</p>
-    </div>
-    <div class="row g-4 align-items-stretch">
-      <div class="col-lg-5">
-        <div class="contact-stack">
-          <div class="info-card compact"><div class="ic"><i class="bi bi-geo-alt-fill"></i></div>
-            <div><h4 data-i18n="c_loc">இடம்</h4><p data-i18n="c_loc_val">ஊத்தங்கரை, தமிழ்நாடு</p></div></div>
-          <div class="info-card compact"><div class="ic"><i class="bi bi-telephone-fill"></i></div>
-            <div><h4 data-i18n="c_phonewa">Phone / WhatsApp</h4>
-              <p class="phones"><a href="tel:+919150620572">+91 9150620572</a> <span class="sep">|</span> <a href="tel:+919003703237">+91 9003703237</a></p></div></div>
-          <div class="d-flex flex-wrap gap-2">
-            <a href="#" data-wa target="_blank" rel="noopener" class="btn btn-wa flex-fill"><i class="bi bi-whatsapp me-1"></i><span data-i18n="wa">வாட்ஸ்அப்</span></a>
-            <a href="tel:+919150620572" class="btn btn-primary flex-fill"><i class="bi bi-telephone-fill me-1"></i><span data-i18n="call_store">அழைக்கவும்</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-7">
-        <div class="map-card">
-          <iframe id="mapFrame" class="map-frame" title="Sri Siva Book Store — Uthangarai"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.67029545698384!2d78.52844593629254!3d12.266898365476354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac5dd35fb283ab%3A0x6c43e7ace1f1b385!2sSri%20Siva%20Book%20Store!5e0!3m2!1sen!2sin!4v1792327941733!5m2!1sen!2sin"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          <div class="map-actions">
-            <a href="#" id="mapDir" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-signpost-2-fill"></i> <span data-i18n="map_dir">வழிகாட்டுதல் பெறவும்</span></a>
-            <a href="#" id="mapOpen" target="_blank" rel="noopener" class="btn btn-outline"><i class="bi bi-geo-alt-fill"></i> <span data-i18n="map_open">கூகுள் மேப்ஸில் திறக்கவும்</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
-<footer class="site-footer" id="siteFooter">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-5">
-        <div class="foot-brand"><span class="brand-mark" data-i18n="brand_mark">S</span><span class="brand-text"><span class="brand-name" style="color:#fff" data-i18n="brand_name">ஸ்ரீ சிவா புத்தக நிலையம்</span><span class="brand-sub" data-i18n="brand_sub">ஊத்தங்கரை, தமிழ்நாடு</span></span></div>
-        <p style="max-width:340px" data-i18n="foot_tag">தரமான ஸ்டேஷனரி, ஃபேன்சி பொருட்கள் & பிரிண்டிங் சேவைகள்.</p>
-        <p style="color:#9aa0c2" data-i18n="foot_tag2">ஊத்தங்கரைக்கு நம்பகமான பொருட்களுடன் சேவை.</p>
-      </div>
-      <div class="col-6 col-lg-3">
-        <h5 data-i18n="foot_links">பகுதிகள்</h5>
-        <ul>
-          <li><a href="#brands" data-i18n="nav_brands">பிராண்டுகள்</a></li>
-          <li><a href="#services" data-i18n="nav_services">சேவைகள்</a></li>
-          <li><a href="#csc" data-i18n="nav_csc">CSC சேவைகள்</a></li>
-          <li><a href="#products" data-i18n="nav_products">பொருட்கள்</a></li>
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <span class="brand-mark" data-i18n="brand_mark">S</span>
+        <span class="brand-text"><span class="brand-name" data-i18n="brand_name">ஸ்ரீ சிவா புத்தக நிலையம்</span><span
+            class="brand-sub" data-i18n="brand_sub">ஊத்தங்கரை, தமிழ்நாடு</span></span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" data-spy href="#home" data-i18n="nav_home">முகப்பு</a></li>
+          <li class="nav-item"><a class="nav-link" data-spy href="#services" data-i18n="nav_services">சேவைகள்</a></li>
+          <li class="nav-item"><a class="nav-link" data-spy href="#products" data-i18n="nav_products">பொருட்கள்</a></li>
+          <li class="nav-item"><a class="nav-link" data-spy href="#contact" data-i18n="nav_contact">தொடர்பு</a></li>
         </ul>
-      </div>
-      <div class="col-6 col-lg-4">
-        <h5 data-i18n="foot_contact">தொடர்பு</h5>
-        <ul>
-          <li><i class="bi bi-geo-alt-fill me-2"></i><span data-i18n="c_loc_val">ஊத்தங்கரை, தமிழ்நாடு</span></li>
-          <li><i class="bi bi-telephone-fill me-2"></i><a href="tel:+919150620572">+91 9150620572</a> <span style="color:#4b5077">|</span> <a href="tel:+919003703237">+91 9003703237</a></li>
-          <li><i class="bi bi-whatsapp me-2"></i><a href="#" data-wa target="_blank" rel="noopener" data-i18n="foot_wa">வாட்ஸ்அப்பில் தொடர்பு கொள்ளுங்கள்</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom text-center">© <span id="year">2026</span> <span data-i18n="rights">ஸ்ரீ சிவா புத்தக நிலையம், ஊத்தங்கரை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</span></div>
-  </div>
-</footer>
-
-<!-- ===================== PRODUCT MODAL ===================== -->
-<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <button class="pm-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-      <div class="row g-0">
-        <div class="col-md-6"><div class="pm-photo"><img id="pmImg" src="" alt=""></div></div>
-        <div class="col-md-6"><div class="pm-body">
-          <span class="pm-brand" id="pmBrand"></span>
-          <h3 class="pm-name" id="pmName"></h3>
-          <div class="pm-price" id="pmPrice"></div>
-          <p class="pm-desc" id="pmDesc"></p>
-          <div class="pm-qtywrap"><span class="lbl" data-i18n="cart_total">அளவு</span><div class="p-ctrl" id="pmCtrl" data-pid=""></div></div>
-          <a href="#" id="pmWa" target="_blank" rel="noopener" class="btn btn-wa w-100 mt-2"><i class="bi bi-whatsapp me-1"></i><span data-i18n="cart_enquire">வாட்ஸ்அப்பில் கேளுங்கள்</span></a>
-          <a href="tel:+919150620572" class="btn btn-primary w-100 mt-2"><i class="bi bi-telephone-fill me-1"></i><span data-i18n="call_store">அழைக்கவும்</span></a>
-        </div></div>
+        <div class="nav-tools ms-lg-3">
+          <div class="lang-wrap">
+            <button class="btn-lang" id="langBtn"><i class="bi bi-translate"></i> <span id="langLabel">தமிழ்</span> <i
+                class="bi bi-chevron-down" style="font-size:.7rem"></i></button>
+            <div class="lang-menu" id="langMenu">
+              <button data-lang="ta" class="sel"><i class="bi bi-check-lg"></i> தமிழ்</button>
+              <button data-lang="en"><i class="bi bi-check-lg"></i> English</button>
+            </div>
+          </div>
+          <a class="nav-cart nav-call" href="tel:+919150620572" aria-label="Call"><i
+              class="bi bi-telephone-fill"></i></a>
+          <button class="nav-cart" id="navCart" aria-label="Cart"><i class="bi bi-cart3"></i><span class="count"
+              id="navCartCount">0</span></button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </nav>
 
-<!-- ===================== CATEGORY DRILL-DOWN PAGE ===================== -->
-<div class="catpage-overlay" id="catPageOverlay"></div>
-<section class="catpage" id="catPage" aria-label="Category">
-  <div class="catpage-head">
-    <div class="container d-flex align-items-center justify-content-between">
-      <div>
-        <nav class="cat-crumb" id="catCrumb"></nav>
-        <h2 class="cat-title" id="catTitle"></h2>
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="home">
+    <div class="container text-center">
+      <span class="hero-loc reveal"><i class="bi bi-geo-alt-fill"></i> <span data-i18n="hero_loc">ஊத்தங்கரை •
+          தமிழ்நாடு</span></span>
+      <h1 class="reveal" data-i18n-html="hero_title">ஸ்ரீ சிவா <span class="u">புத்தக நிலையம்</span></h1>
+      <p class="hero-tag reveal" data-i18n="hero_tag">ஸ்டேஷனரி | ஜெராக்ஸ் | பிரிண்ட் அவுட் | லேமினேஷன் | ஸ்பைரல்
+        பைண்டிங் | பர்த்டே & கிஃப்ட் ஐட்டம்ஸ் | ஃபேன்சி ஐட்டம்ஸ்</p>
+      <div class="hero-cta reveal">
+        <a href="#products" class="btn btn-accent"><i class="bi bi-grid-fill me-1"></i><span
+            data-i18n="hero_view">பொருட்களை பார்க்கவும்</span></a>
+        <a href="#contact" class="btn btn-ghost"><i class="bi bi-telephone-fill me-1"></i><span
+            data-i18n="hero_contact">தொடர்பு கொள்ளவும்</span></a>
+        <a href="#" id="heroDir" target="_blank" rel="noopener" class="btn btn-ghost"><i
+            class="bi bi-signpost-2-fill me-1"></i><span data-i18n="hero_dir">வழிகாட்டுதலை பெறவும்</span></a>
       </div>
-      <button class="cat-close" id="catClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="hero-strip reveal">
+        <a href="#brands" class="pill"><i class="bi bi-pencil-fill me-1"></i>Stationery Supplies</a>
+        <a href="#services" class="pill"><i class="bi bi-printer-fill me-1"></i>Xerox · Print · Lamination</a>
+        <a href="#csc" class="pill"><i class="bi bi-person-vcard-fill me-1"></i>CSC · e-Services</a>
+        <a href="#products" class="pill"><i class="bi bi-gift-fill me-1"></i>Fancy · Gift · Party</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ===================== SERVICES ===================== -->
+  
+  <section class="section" id="services">
+
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="csc_eye">ஆன்லைன் சேவைகள்</span>
+        <h2 class="sec-title" data-i18n="csc_title">CSC சேவைகள்</h2>
+        <p class="sec-lead" data-i18n="csc_lead">PAN, ஆதார், ரேஷன் கார்டு, அரசுத் தேர்வு விண்ணப்பங்கள் மற்றும் பல —
+          விவரங்களுக்கு வாட்ஸ்அப்பில் கேளுங்கள்.</p>
+      </div>
+      <div class="svc-grid csc-grid" id="cscGrid"></div>
+    </div>
+
+    <br>
+    <br>
+    
+    <div class="container">
+      <div class="sec-head">
+        <!-- <span class="eyebrow accent" data-i18n="svc_eye">எங்கள் சேவைகள்</span> -->
+        <h2 class="sec-title" data-i18n="svc_title">பிரிண்ட் & பைண்டிங் சேவைகள்</h2>
+        <p class="sec-lead" data-i18n="svc_lead">பிரிண்ட், ஜெராக்ஸ், லேமினேஷன், ஸ்பைரல் பைண்டிங் — ஒரே இடத்தில்.</p>
+      </div>
+      <div class="svc-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===================== OUR PRODUCTS (with categories inside) ===================== -->
+  <section class="section soft" id="products">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="prod_eye">பார்த்து • கேளுங்கள்</span>
+        <h2 class="sec-title" data-i18n="prod_title">எங்கள் பொருட்கள்</h2>
+        <p class="sec-lead" data-i18n="prod_lead">பொருளைத் தட்டி விவரங்களைப் பார்க்கவும்.</p>
+      </div>
+
+      <div class="toolbar mb-4">
+        <div class="row g-3 align-items-center">
+          <div class="col-lg-6 mx-auto">
+            <div class="search-wrap"><i class="bi bi-search"></i><input id="searchInput" type="search"
+                data-i18n-ph="search_ph" placeholder="பொருட்களைத் தேடுங்கள்…" autocomplete="off"><button
+                class="search-clear" id="searchClear" type="button" aria-label="Clear"><i
+                  class="bi bi-x-lg"></i></button></div>
+          </div>
+          <div class="col-12">
+            <div class="pills" id="filterPills"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-subhead">
+        <h3 class="sub-title" data-i18n="cat_title">பொருள் வகைகள்</h3>
+      </div>
+      <div class="cat-grid" id="categoryGrid"></div>
+
+      <div class="row g-3 g-md-4 mt-1" id="productsGrid"></div>
+      <div class="text-center mt-2"><span class="result-count" id="resultCount"></span></div>
+      <div class="text-center mt-4"><button id="loadMore" class="btn btn-outline" style="display:none">Load
+          more</button></div>
+    </div>
+  </section>
+
+  <!-- ===================== BRANDS ===================== -->
+  <section class="section soft brands-compact" id="brands">
+    <div class="container">
+      <div class="sec-head" style="margin-bottom:26px">
+        <span class="eyebrow" data-i18n="brand_eye">நம்பகமான பிராண்டுகள்</span>
+        <h2 class="sec-title" data-i18n="brand_title">எங்கள் பிராண்டுகள்</h2>
+        <p class="sec-lead" data-i18n="brand_lead">நாங்கள் வழங்கும் நம்பகமான பிராண்டுகள்.</p>
+      </div>
+      <div class="brand-grid" id="brandGrid"></div>
+      <p class="brand-note" data-i18n="brand_note">* பிராண்ட் பெயர்கள் மற்றும் லோகோக்கள் அந்தந்த நிறுவனங்களுக்கு
+        சொந்தமானவை.</p>
+    </div>
+  </section>
+
+  <section class="section soft" id="contact">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow accent" data-i18n="contact_eye">தொடர்பு கொள்ள</span>
+        <h2 class="sec-title" data-i18n="contact_title">எங்களைத் தொடர்பு கொள்ளுங்கள்</h2>
+        <p class="sec-lead" data-i18n="contact_lead">விலை மற்றும் இருப்பு அறிய அழைக்கவும் அல்லது வாட்ஸ்அப் செய்யவும்.
+        </p>
+      </div>
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-5">
+          <div class="contact-stack">
+            <div class="info-card compact">
+              <div class="ic"><i class="bi bi-geo-alt-fill"></i></div>
+              <div>
+                <h4 data-i18n="c_loc">இடம்</h4>
+                <p data-i18n="c_loc_val">ஊத்தங்கரை, தமிழ்நாடு</p>
+              </div>
+            </div>
+            <div class="info-card compact">
+              <div class="ic"><i class="bi bi-telephone-fill"></i></div>
+              <div>
+                <h4 data-i18n="c_phonewa">Phone / WhatsApp</h4>
+                <p class="phones"><a href="tel:+919150620572">+91 9150620572</a> <span class="sep">|</span> <a
+                    href="tel:+919003703237">+91 9003703237</a></p>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#" data-wa target="_blank" rel="noopener" class="btn btn-wa flex-fill"><i
+                  class="bi bi-whatsapp me-1"></i><span data-i18n="wa">வாட்ஸ்அப்</span></a>
+              <a href="tel:+919150620572" class="btn btn-primary flex-fill"><i
+                  class="bi bi-telephone-fill me-1"></i><span data-i18n="call_store">அழைக்கவும்</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="map-card">
+            <iframe id="mapFrame" class="map-frame" title="Sri Siva Book Store — Uthangarai"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.67029545698384!2d78.52844593629254!3d12.266898365476354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac5dd35fb283ab%3A0x6c43e7ace1f1b385!2sSri%20Siva%20Book%20Store!5e0!3m2!1sen!2sin!4v1792327941733!5m2!1sen!2sin"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="map-actions">
+              <a href="#" id="mapDir" target="_blank" rel="noopener" class="btn btn-primary"><i
+                  class="bi bi-signpost-2-fill"></i> <span data-i18n="map_dir">வழிகாட்டுதல் பெறவும்</span></a>
+              <a href="#" id="mapOpen" target="_blank" rel="noopener" class="btn btn-outline"><i
+                  class="bi bi-geo-alt-fill"></i> <span data-i18n="map_open">கூகுள் மேப்ஸில் திறக்கவும்</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="foot-brand"><span class="brand-mark" data-i18n="brand_mark">S</span><span class="brand-text"><span
+                class="brand-name" style="color:#fff" data-i18n="brand_name">ஸ்ரீ சிவா புத்தக நிலையம்</span><span
+                class="brand-sub" data-i18n="brand_sub">ஊத்தங்கரை, தமிழ்நாடு</span></span></div>
+          <p style="max-width:340px" data-i18n="foot_tag">தரமான ஸ்டேஷனரி, ஃபேன்சி பொருட்கள் & பிரிண்டிங் சேவைகள்.</p>
+          <p style="color:#9aa0c2" data-i18n="foot_tag2">ஊத்தங்கரைக்கு நம்பகமான பொருட்களுடன் சேவை.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5 data-i18n="foot_links">பகுதிகள்</h5>
+          <ul>
+            <li><a href="#brands" data-i18n="nav_brands">பிராண்டுகள்</a></li>
+            <li><a href="#services" data-i18n="nav_services">சேவைகள்</a></li>
+            <li><a href="#csc" data-i18n="nav_csc">CSC சேவைகள்</a></li>
+            <li><a href="#products" data-i18n="nav_products">பொருட்கள்</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-4">
+          <h5 data-i18n="foot_contact">தொடர்பு</h5>
+          <ul>
+            <li><i class="bi bi-geo-alt-fill me-2"></i><span data-i18n="c_loc_val">ஊத்தங்கரை, தமிழ்நாடு</span></li>
+            <li><i class="bi bi-telephone-fill me-2"></i><a href="tel:+919150620572">+91 9150620572</a> <span
+                style="color:#4b5077">|</span> <a href="tel:+919003703237">+91 9003703237</a></li>
+            <li><i class="bi bi-whatsapp me-2"></i><a href="#" data-wa target="_blank" rel="noopener"
+                data-i18n="foot_wa">வாட்ஸ்அப்பில் தொடர்பு கொள்ளுங்கள்</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">© <span id="year">2026</span> <span data-i18n="rights">ஸ்ரீ சிவா புத்தக
+          நிலையம், ஊத்தங்கரை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</span></div>
+    </div>
+  </footer>
+
+  <!-- ===================== PRODUCT MODAL ===================== -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <button class="pm-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+        <div class="row g-0">
+          <div class="col-md-6">
+            <div class="pm-photo"><img id="pmImg" src="" alt=""></div>
+          </div>
+          <div class="col-md-6">
+            <div class="pm-body">
+              <span class="pm-brand" id="pmBrand"></span>
+              <h3 class="pm-name" id="pmName"></h3>
+              <div class="pm-price" id="pmPrice"></div>
+              <p class="pm-desc" id="pmDesc"></p>
+              <div class="pm-qtywrap"><span class="lbl" data-i18n="cart_total">அளவு</span>
+                <div class="p-ctrl" id="pmCtrl" data-pid=""></div>
+              </div>
+              <a href="#" id="pmWa" target="_blank" rel="noopener" class="btn btn-wa w-100 mt-2"><i
+                  class="bi bi-whatsapp me-1"></i><span data-i18n="cart_enquire">வாட்ஸ்அப்பில் கேளுங்கள்</span></a>
+              <a href="tel:+919150620572" class="btn btn-primary w-100 mt-2"><i
+                  class="bi bi-telephone-fill me-1"></i><span data-i18n="call_store">அழைக்கவும்</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="catpage-body"><div class="container" id="catPageBody"></div></div>
-</section>
 
-<!-- ===================== CART PANEL ===================== -->
-<div class="cart-overlay" id="cartOverlay"></div>
-<aside class="cart-panel" id="cartPanel" aria-label="Cart">
-  <div class="cart-head"><h3 data-i18n="cart_title">உங்கள் கார்ட்</h3><button class="x" id="cartClose" aria-label="Close"><i class="bi bi-x-lg"></i></button></div>
-  <div class="cart-items" id="cartItems"></div>
-  <div class="cart-foot" id="cartFoot" style="display:none">
-    <div class="sum"><span data-i18n="cart_total">மொத்தப் பொருட்கள்</span><span id="cartTotalNum">0</span></div>
-    <a href="#" id="cartEnquire" target="_blank" rel="noopener" class="btn btn-wa"><i class="bi bi-whatsapp me-1"></i><span data-i18n="cart_enquire">வாட்ஸ்அப்பில் கேளுங்கள்</span></a>
-    <button class="cart-clear" id="cartClear" data-i18n="cart_clear">கார்ட்டை காலி செய்</button>
-  </div>
-</aside>
+  <!-- ===================== CATEGORY DRILL-DOWN PAGE ===================== -->
+  <div class="catpage-overlay" id="catPageOverlay"></div>
+  <section class="catpage" id="catPage" aria-label="Category">
+    <div class="catpage-head">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div>
+          <nav class="cat-crumb" id="catCrumb"></nav>
+          <h2 class="cat-title" id="catTitle"></h2>
+        </div>
+        <button class="cat-close" id="catClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      </div>
+    </div>
+    <div class="catpage-body">
+      <div class="container" id="catPageBody"></div>
+    </div>
+  </section>
 
-<!-- floating -->
-<a href="#" data-wa target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-<button class="to-top" id="toTop" aria-label="Top"><i class="bi bi-arrow-up"></i></button>
-<div class="toast-note" id="toast"><i class="bi bi-check-circle-fill"></i><span></span></div>
+  <!-- ===================== CART PANEL ===================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Cart">
+    <div class="cart-head">
+      <h3 data-i18n="cart_title">உங்கள் கார்ட்</h3><button class="x" id="cartClose" aria-label="Close"><i
+          class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot" id="cartFoot" style="display:none">
+      <div class="sum"><span data-i18n="cart_total">மொத்தப் பொருட்கள்</span><span id="cartTotalNum">0</span></div>
+      <a href="#" id="cartEnquire" target="_blank" rel="noopener" class="btn btn-wa"><i
+          class="bi bi-whatsapp me-1"></i><span data-i18n="cart_enquire">வாட்ஸ்அப்பில் கேளுங்கள்</span></a>
+      <button class="cart-clear" id="cartClear" data-i18n="cart_clear">கார்ட்டை காலி செய்</button>
+    </div>
+  </aside>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"></script>
+  <!-- floating -->
+  <a href="#" data-wa target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp"><i
+      class="bi bi-whatsapp"></i></a>
+  <button class="to-top" id="toTop" aria-label="Top"><i class="bi bi-arrow-up"></i></button>
+  <div class="toast-note" id="toast"><i class="bi bi-check-circle-fill"></i><span></span></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
